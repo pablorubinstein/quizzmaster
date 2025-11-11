@@ -1,0 +1,134 @@
+{
+  "common": {
+    "appName": "Quiz Master",
+    "appDescription": "Test your knowledge with interactive quizzes",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  },
+  "navigation": {
+    "home": "Home",
+    "quizzes": "Quizzes",
+    "history": "History",
+    "feedback": "Feedback",
+    "upload": "Upload Quiz",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Quiz Master",
+    "subtitle": "Test your knowledge with interactive quizzes",
+    "stats": {
+      "totalAttempts": "Total Attempts",
+      "averageScore": "Average Score",
+      "quizzesCompleted": "Quizzes Completed"
+    },
+    "availableQuizzes": "Available Quizzes",
+    "noQuizzesAvailable": "No quizzes available yet.",
+    "uploadQuiz": "Upload a Quiz",
+    "sendFeedback": "Send Feedback",
+    "viewHistory": "View History",
+    "startQuiz": "Start Quiz"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "question": "Question",
+    "of": "of",
+    "selectAnswer": "Select an answer",
+    "progress": "Progress",
+    "submit": "Submit Quiz",
+    "finish": "Finish Quiz",
+    "timeRemaining": "Time Remaining",
+    "noTimeLimit": "No time limit",
+    "loadingQuiz": "Loading quiz...",
+    "reviewAnswers": "Review Answers"
+  },
+  "review": {
+    "title": "Quiz Review",
+    "score": "Score",
+    "correct": "Correct",
+    "incorrect": "Incorrect",
+    "yourAnswer": "Your Answer",
+    "correctAnswer": "Correct Answer",
+    "questionsToReview": "Questions to Review",
+    "allAnswers": "All Answers",
+    "missedQuestions": "Missed {{count}} out of {{total}} questions",
+    "perfectScore": "Perfect! You got all questions correct!",
+    "retakeQuiz": "Retake Quiz",
+    "backToHome": "Back to Home",
+    "question": "Question",
+    "options": "Options"
+  },
+  "history": {
+    "title": "Quiz History",
+    "noAttempts": "You haven't completed any quizzes yet",
+    "attemptNumber": "Attempt {{number}}",
+    "completedOn": "Completed on {{date}} at {{time}}",
+    "score": "Score",
+    "viewDetails": "View Details",
+    "takeAQuiz": "Take a Quiz",
+    "totalAttempts": "You have completed {{count}} quiz",
+    "totalAttempts_plural": "You have completed {{count}} quizzes"
+  },
+  "feedback": {
+    "title": "Send Feedback",
+    "subtitle": "Help us improve by reporting errors or suggesting new quizzes",
+    "type": "Feedback Type",
+    "errorReport": "Error Report",
+    "suggestion": "Suggestion",
+    "message": "Message",
+    "submit": "Submit Feedback",
+    "thankYou": "Thank You!",
+    "feedbackSubmitted": "Your feedback has been submitted successfully.",
+    "redirecting": "Redirecting to home...",
+    "selectQuiz": "Select Quiz (Optional)",
+    "selectQuestion": "Select Question (Optional)"
+  },
+  "upload": {
+    "title": "Upload a Quiz",
+    "subtitle": "Add a new quiz by uploading a text file or pasting quiz content",
+    "uploadFile": "Upload File (Optional)",
+    "quizContent": "Quiz Content",
+    "formatGuide": "Quiz Format Guide",
+    "uploadQuiz": "Upload Quiz",
+    "uploading": "Uploading...",
+    "quizUploaded": "Quiz Uploaded!",
+    "quizAdded": "Your quiz has been added successfully.",
+    "invalidFormat": "Invalid quiz format. Please check the format and try again. Quiz must have a title and at least one question.",
+    "placeholderContent": "Title: My Quiz\nDescription: A brief description\n---\nQ1: What is the capital of France?\nA) London\nB) Paris\nC) Berlin\nD) Madrid\nCorrect: B\n---\nQ2: Next question?\nA) Option A\nB) Option B\nC) Option C\nD) Option D\nCorrect: A",
+    "formatRules": [
+      "Start with Title: Your Quiz Title",
+      "Add Description: Optional",
+      "Separate questions with ---",
+      "Each question: Q1: Question text?",
+      "Options: A) Option, B) Option, etc.",
+      "Mark correct answer: Correct: A"
+    ]
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidFormat": "Invalid format",
+    "minLength": "Must be at least {{min}} characters",
+    "maxLength": "Must be at most {{max}} characters",
+    "quizMustHaveQuestions": "Quiz must have at least one question",
+    "questionMustHaveOptions": "Each question must have text, options, and a correct answer",
+    "minimumOptions": "Each question must have at least 2 options",
+    "correctAnswerMustBeOption": "Correct answer must be one of the options"
+  },
+ "errors": {
+    "quizNotFound": "Quiz not found",
+    "failedToLoadQuiz": "Failed to load quiz",
+    "failedToSubmit": "Failed to submit quiz",
+    "failedToUpload": "Failed to upload quiz",
+    "networkError": "Network error. Please try again.",
+    "tryAgain": "Try Again"
+  }
+}

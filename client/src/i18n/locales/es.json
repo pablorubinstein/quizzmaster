@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Maestro de Cuestionarios",
+    "appDescription": "Prueba tus conocimientos con cuestionarios interactivos",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "quizzes": "Cuestionarios",
+    "history": "Historial",
+    "feedback": "Comentarios",
+    "upload": "Subir Cuestionario",
+    "language": "Idioma"
+  },
+  "home": {
+    "title": "Maestro de Cuestionarios",
+    "subtitle": "Prueba tus conocimientos con cuestionarios interactivos",
+    "stats": {
+      "totalAttempts": "Intentos Totales",
+      "averageScore": "Puntuación Promedio",
+      "quizzesCompleted": "Cuestionarios Completados"
+    },
+    "availableQuizzes": "Cuestionarios Disponibles",
+    "noQuizzesAvailable": "No hay cuestionarios disponibles aún.",
+    "uploadQuiz": "Subir un Cuestionario",
+    "sendFeedback": "Enviar Comentarios",
+    "viewHistory": "Ver Historial",
+    "startQuiz": "Comenzar"
+
+  },
+  "quiz": {
+    "title": "Cuestionario",
+    "question": "Pregunta",
+    "of": "de",
+    "selectAnswer": "Selecciona una respuesta",
+    "progress": "Progreso",
+    "submit": "Enviar Cuestionario",
+    "finish": "Finalizar Cuestionario",
+    "timeRemaining": "Tiempo Restante",
+    "noTimeLimit": "Sin límite de tiempo",
+    "loadingQuiz": "Cargando cuestionario...",
+    "reviewAnswers": "Revisar Respuestas"
+  },
+  "review": {
+    "title": "Revisión del Cuestionario",
+    "score": "Puntuación",
+    "correct": "Correcto",
+    "incorrect": "Incorrecto",
+    "yourAnswer": "Tu Respuesta",
+    "correctAnswer": "Respuesta Correcta",
+    "questionsToReview": "Preguntas para Revisar",
+    "allAnswers": "Todas las Respuestas",
+    "missedQuestions": "Te perdiste {{count}} de {{total}} preguntas",
+    "perfectScore": "¡Perfecto! ¡Acertaste todas las preguntas!",
+    "retakeQuiz": "Repetir Cuestionario",
+    "backToHome": "Volver al Inicio",
+    "question": "Pregunta",
+    "options": "Opciones"
+  },
+  "history": {
+    "title": "Historial de Cuestionarios",
+    "noAttempts": "Aún no has completado ningún cuestionario",
+    "attemptNumber": "Intento {{number}}",
+    "completedOn": "Completado el {{date}} a las {{time}}",
+    "score": "Puntuación",
+    "viewDetails": "Ver Detalles",
+    "takeAQuiz": "Tomar un Cuestionario",
+    "totalAttempts": "Has completado {{count}} cuestionario",
+    "totalAttempts_plural": "Has completado {{count}} cuestionarios"
+  },
+  "feedback": {
+    "title": "Enviar Comentarios",
+    "subtitle": "Ayúdanos a mejorar reportando errores o sugiriendo nuevos cuestionarios",
+    "type": "Tipo de Comentario",
+    "errorReport": "Reporte de Error",
+    "suggestion": "Sugerencia",
+    "message": "Mensaje",
+    "submit": "Enviar Comentarios",
+    "thankYou": "¡Gracias!",
+    "feedbackSubmitted": "Tus comentarios han sido enviados exitosamente.",
+    "redirecting": "Redirigiendo al inicio...",
+    "selectQuiz": "Seleccionar Cuestionario (Opcional)",
+    "selectQuestion": "Seleccionar Pregunta (Opcional)"
+  },
+  "upload": {
+    "title": "Subir un Cuestionario",
+    "subtitle": "Añade un nuevo cuestionario subiendo un archivo de texto o pegando contenido",
+    "uploadFile": "Subir Archivo (Opcional)",
+    "quizContent": "Contenido del Cuestionario",
+    "formatGuide": "Guía de Formato de Cuestionario",
+    "uploadQuiz": "Subir Cuestionario",
+    "uploading": "Subiendo...",
+    "quizUploaded": "¡Cuestionario Subido!",
+    "quizAdded": "Tu cuestionario ha sido añadido exitosamente.",
+    "invalidFormat": "Formato de cuestionario inválido. Por favor verifica el formato e intenta de nuevo. El cuestionario debe tener un título y al menos una pregunta.",
+    "placeholderContent": "Título: Mi Cuestionario\nDescripción: Una breve descripción\n---\nP1: ¿Cuál es la capital de Francia?\nA) Londres\nB) París\nC) Berlín\nD) Madrid\nCorrecta: B\n---\nP2: ¿Siguiente pregunta?\nA) Opción A\nB) Opción B\nC) Opción C\nD) Opción D\nCorrecta: A",
+    "formatRules": [
+      "Comienza con Título: Tu Título de Cuestionario",
+      "Añade Descripción: Opcional",
+      "Separa preguntas con ---",
+      "Cada pregunta: P1: ¿Texto de la pregunta?",
+      "Opciones: A) Opción, B) Opción, etc.",
+      "Marca la respuesta correcta: Correcta: A"
+    ]
+  },
+  "validation": {
+    "required": "Este campo es requerido",
+    "invalidFormat": "Formato inválido",
+    "minLength": "Debe tener al menos {{min}} caracteres",
+    "maxLength": "Debe tener como máximo {{max}} caracteres",
+    "quizMustHaveQuestions": "El cuestionario debe tener al menos una pregunta",
+    "questionMustHaveOptions": "Cada pregunta debe tener texto, opciones y una respuesta correcta",
+    "minimumOptions": "Cada pregunta debe tener al menos 2 opciones",
+    "correctAnswerMustBeOption": "La respuesta correcta debe ser una de las opciones"
+  },
+  "errors": {
+    "quizNotFound": "Cuestionario no encontrado",
+    "failedToLoadQuiz": "Error al cargar el cuestionario",
+    "failedToSubmit": "Error al enviar el cuestionario",
+    "failedToUpload": "Error al subir el cuestionario",
+    "networkError": "Error de red. Por favor intenta de nuevo.",
+    "tryAgain": "Intentar de Nuevo"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "common": {
+    "appName": "Maître des Quiz",
+    "appDescription": "Testez vos connaissances avec des quiz interactifs",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "quizzes": "Quiz",
+    "history": "Historique",
+    "feedback": "Commentaires",
+    "upload": "Télécharger un Quiz",
+    "language": "Langue"
+  },
+  "home": {
+    "title": "Maître des Quiz",
+    "subtitle": "Testez vos connaissances avec des quiz interactifs",
+    "stats": {
+      "totalAttempts": "Tentatives Totales",
+      "averageScore": "Score Moyen",
+      "quizzesCompleted": "Quiz Complétés"
+    },
+    "availableQuizzes": "Quiz Disponibles",
+    "noQuizzesAvailable": "Aucun quiz disponible pour le moment.",
+    "uploadQuiz": "Télécharger un Quiz",
+    "sendFeedback": "Envoyer des Commentaires",
+    "viewHistory": "Voir l'Historique",
+    "startQuiz": "Démarrer"
+
+  },
+  "quiz": {
+    "title": "Quiz",
+    "question": "Question",
+    "of": "sur",
+    "selectAnswer": "Sélectionnez une réponse",
+    "progress": "Progression",
+    "submit": "Soumettre le Quiz",
+    "finish": "Terminer le Quiz",
+    "timeRemaining": "Temps Restant",
+    "noTimeLimit": "Pas de limite de temps",
+    "loadingQuiz": "Chargement du quiz...",
+    "reviewAnswers": "Examiner les réponses"
+  },
+  "review": {
+    "title": "Révision du Quiz",
+    "score": "Score",
+    "correct": "Correct",
+    "incorrect": "Incorrect",
+    "yourAnswer": "Votre Réponse",
+    "correctAnswer": "Réponse Correcte",
+    "questionsToReview": "Questions à Réviser",
+    "allAnswers": "Toutes les Réponses",
+    "missedQuestions": "Vous avez manqué {{count}} sur {{total}} questions",
+    "perfectScore": "Parfait ! Vous avez réussi toutes les questions !",
+    "retakeQuiz": "Reprendre le Quiz",
+    "backToHome": "Retour à l'Accueil",
+    "question": "Question",
+    "options": "Options"
+  },
+  "history": {
+    "title": "Historique des Quiz",
+    "noAttempts": "Vous n'avez pas encore complété de quiz",
+    "attemptNumber": "Tentative {{number}}",
+    "completedOn": "Complété le {{date}} à {{time}}",
+    "score": "Score",
+    "viewDetails": "Voir les Détails",
+    "takeAQuiz": "Faire un Quiz",
+    "totalAttempts": "Vous avez complété {{count}} quiz",
+    "totalAttempts_plural": "Vous avez complété {{count}} quiz"
+  },
+  "feedback": {
+    "title": "Envoyer des Commentaires",
+    "subtitle": "Aidez-nous à améliorer en signalant des erreurs ou en suggérant de nouveaux quiz",
+    "type": "Type de Commentaire",
+    "errorReport": "Signalement d'Erreur",
+    "suggestion": "Suggestion",
+    "message": "Message",
+    "submit": "Envoyer les Commentaires",
+    "thankYou": "Merci !",
+    "feedbackSubmitted": "Vos commentaires ont été envoyés avec succès.",
+    "redirecting": "Redirection vers l'accueil...",
+    "selectQuiz": "Sélectionner un Quiz (Optionnel)",
+    "selectQuestion": "Sélectionner une Question (Optionnel)"
+  },
+  "upload": {
+    "title": "Télécharger un Quiz",
+    "subtitle": "Ajoutez un nouveau quiz en téléchargeant un fichier texte ou en collant du contenu",
+    "uploadFile": "Télécharger un Fichier (Optionnel)",
+    "quizContent": "Contenu du Quiz",
+    "formatGuide": "Guide de Format de Quiz",
+    "uploadQuiz": "Télécharger le Quiz",
+    "uploading": "Téléchargement...",
+    "quizUploaded": "Quiz Téléchargé !",
+    "quizAdded": "Votre quiz a été ajouté avec succès.",
+    "invalidFormat": "Format de quiz invalide. Veuillez vérifier le format et réessayer. Le quiz doit avoir un titre et au moins une question.",
+    "placeholderContent": "Titre: Mon Quiz\nDescription: Une brève description\n---\nQ1: Quelle est la capitale de la France?\nA) Londres\nB) Paris\nC) Berlin\nD) Madrid\nCorrect: B\n---\nQ2: Question suivante?\nA) Option A\nB) Option B\nC) Option C\nD) Option D\nCorrect: A",
+    "formatRules": [
+      "Commencez par Titre: Votre Titre de Quiz",
+      "Ajoutez Description: Optionnel",
+      "Séparez les questions par ---",
+      "Chaque question: Q1: Texte de la question?",
+      "Options: A) Option, B) Option, etc.",
+      "Marquez la réponse correcte: Correct: A"
+    ]
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "invalidFormat": "Format invalide",
+    "minLength": "Doit contenir au moins {{min}} caractères",
+    "maxLength": "Doit contenir au maximum {{max}} caractères",
+    "quizMustHaveQuestions": "Le quiz doit avoir au moins une question",
+    "questionMustHaveOptions": "Chaque question doit avoir un texte, des options et une réponse correcte",
+    "minimumOptions": "Chaque question doit avoir au moins 2 options",
+    "correctAnswerMustBeOption": "La réponse correcte doit être l'une des options"
+  },
+  "errors": {
+    "quizNotFound": "Quiz non trouvé",
+    "failedToLoadQuiz": "Échec du chargement du quiz",
+    "failedToSubmit": "Échec de la soumission du quiz",
+    "failedToUpload": "Échec du téléchargement du quiz",
+    "networkError": "Erreur réseau. Veuillez réessayer.",
+    "tryAgain": "Réessayer"
+  }
+}
