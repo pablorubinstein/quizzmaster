@@ -132,7 +132,7 @@ export default function Quiz() {
 
                 <div className="flex gap-4 justify-center">
                   <Button
-                    onClick={() => setLocation(`/review/${result.attemptId}`)}
+                    onClick={() => setLocation(`/review/${result.attemptId}/${quizId}`)}
                     className="px-6"
                   >
                     Review Answers

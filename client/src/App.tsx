@@ -9,6 +9,7 @@ import Quiz from "./pages/Quiz";
 import Review from "./pages/Review";
 import Feedback from "./pages/Feedback";
 import History from "./pages/History";
+import Upload from "./pages/Upload";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -16,9 +17,10 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/quiz/:quizId" component={Quiz} />
-      <Route path="/review/:attemptId" component={Review} />
+      <Route path="/review/:attemptId/:quizId" component={Review} />
       <Route path="/feedback" component={Feedback} />
       <Route path="/history" component={History} />
+      <Route path="/upload" component={Upload} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

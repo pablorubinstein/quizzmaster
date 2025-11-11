@@ -69,7 +69,7 @@ export default function History() {
                   </CardHeader>
                   <CardContent>
                     <Button
-                      onClick={() => setLocation(`/review/${attempt.id}`)}
+                      onClick={() => setLocation(`/review/${attempt.id}/${attempt.quizId}`)}
                       variant="outline"
                       className="w-full"
                     >

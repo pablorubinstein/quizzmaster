@@ -126,7 +126,7 @@ export const quizRouter = router({
       }
 
       // Get the attempt ID from the result
-      const attemptId = (attemptResult as any).insertId || (attemptResult as any)[0];
+      const attemptId = (attemptResult as any)[0].insertId ; // PABLO || (attemptResult as any)[0];
 
       // Record individual answers
       for (const answer of input.answers) {
@@ -177,17 +177,36 @@ export const quizRouter = router({
     }),
 
   /**
-   * Get details of a specific attempt (for review)
+   * Get details of a specific attempt (for review) with full question information
    */
   getAttemptDetails: publicProcedure
-    .input(z.object({ attemptId: z.number() }))
+    .input(z.object({ attemptId: z.number(), quizId: z.number() }))
     .query(async ({ input }) => {
       const answers = await getAttemptAnswers(input.attemptId);
-      return answers.map((answer) => ({
-        questionIndex: answer.questionIndex,
-        selectedAnswer: answer.selectedAnswer,
-        isCorrect: answer.isCorrect === "true",
-      }));
+      const quiz = await getQuizById(input.quizId);
+
+      if (!quiz) {
+        throw new Error("Quiz not found");
+      }
+
+      let quizData: QuizData;
+      try {
+        quizData = JSON.parse(quiz.content);
+      } catch (error) {
+        throw new Error("Invalid quiz data format");
+      }
+
+      return answers.map((answer) => {
+        const question = quizData.questions[answer.questionIndex];
+        return {
+          questionIndex: answer.questionIndex,
+          question: question?.question || "Question not found",
+          options: question?.options || [],
+          correctAnswer: question?.correctAnswer || "",
+          selectedAnswer: answer.selectedAnswer,
+          isCorrect: answer.isCorrect === "true",
+        };
+      });
     }),
 
   /**
@@ -264,4 +283,3 @@ export const quizRouter = router({
       return { success: true };
     }),
 });
-
