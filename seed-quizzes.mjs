@@ -1,5 +1,7 @@
 import { drizzle } from "drizzle-orm/mysql2";
 import { quizzes } from "./drizzle/schema.ts";
+import 'dotenv/config'; // Loads .env file at the start
+
 
 const db = drizzle(process.env.DATABASE_URL);
 
