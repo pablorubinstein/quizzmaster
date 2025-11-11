@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { trpc } from "@/lib/trpc";
 import { getSessionId } from "@/lib/sessionManager";
+import { useTranslation } from 'react-i18next';
 
 export default function History() {
+  const { t } = useTranslation();
   const [, setLocation] = useLocation();
   const [sessionId, setSessionId] = useState<string>("");
 
@@ -51,7 +53,7 @@ export default function History() {
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-lg">Attempt {attempts.length - index}</CardTitle>
+                        <CardTitle className="text-lg">{t('history.attemptNumber', { number: attempts.length - index})}</CardTitle>
                         <p className="text-sm text-gray-500 mt-1">
                           {new Date(attempt.completedAt).toLocaleDateString()} at{" "}
                           {new Date(attempt.completedAt).toLocaleTimeString()}

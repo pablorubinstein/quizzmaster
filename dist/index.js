@@ -784,7 +784,7 @@ var quizRouter = router({
     if (!attemptResult) {
       throw new Error("Failed to create quiz attempt");
     }
-    const attemptId = attemptResult.insertId || attemptResult[0];
+    const attemptId = attemptResult[0].insertId;
     for (const answer of input.answers) {
       const detail = answerDetails.find((d) => d.questionIndex === answer.questionIndex);
       if (detail) {
@@ -825,15 +825,31 @@ var quizRouter = router({
     }));
   }),
   /**
-   * Get details of a specific attempt (for review)
+   * Get details of a specific attempt (for review) with full question information
    */
-  getAttemptDetails: publicProcedure.input(z2.object({ attemptId: z2.number() })).query(async ({ input }) => {
+  getAttemptDetails: publicProcedure.input(z2.object({ attemptId: z2.number(), quizId: z2.number() })).query(async ({ input }) => {
     const answers = await getAttemptAnswers(input.attemptId);
-    return answers.map((answer) => ({
-      questionIndex: answer.questionIndex,
-      selectedAnswer: answer.selectedAnswer,
-      isCorrect: answer.isCorrect === "true"
-    }));
+    const quiz = await getQuizById(input.quizId);
+    if (!quiz) {
+      throw new Error("Quiz not found");
+    }
+    let quizData;
+    try {
+      quizData = JSON.parse(quiz.content);
+    } catch (error) {
+      throw new Error("Invalid quiz data format");
+    }
+    return answers.map((answer) => {
+      const question = quizData.questions[answer.questionIndex];
+      return {
+        questionIndex: answer.questionIndex,
+        question: question?.question || "Question not found",
+        options: question?.options || [],
+        correctAnswer: question?.correctAnswer || "",
+        selectedAnswer: answer.selectedAnswer,
+        isCorrect: answer.isCorrect === "true"
+      };
+    });
   }),
   /**
    * Upload a new quiz

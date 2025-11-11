@@ -4,8 +4,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { trpc } from "@/lib/trpc";
 import { getSessionId } from "@/lib/sessionManager";
 import { useLocation } from "wouter";
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const [sessionId, setSessionId] = useState<string>("");
   const [, setLocation] = useLocation();
 
@@ -24,8 +27,8 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Quiz Master</h1>
-          <p className="text-lg text-gray-600">Test your knowledge with interactive quizzes</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">{t('home.title')}</h1>
+          <p className="text-lg text-gray-600">{t('home.subtitle')}</p>
         </div>
 
         {/* User Stats */}
@@ -33,7 +36,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-gray-600">Total Attempts</CardTitle>
+                <CardTitle className="text-sm font-medium text-gray-600">{t('home.stats.totalAttempts')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-3xl font-bold">{stats.totalAttempts}</div>
@@ -41,7 +44,7 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-gray-600">Average Score</CardTitle>
+                <CardTitle className="text-sm font-medium text-gray-600">{t('home.stats.averageScore')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-3xl font-bold">{stats.averageScore}%</div>
@@ -49,7 +52,7 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-gray-600">Quizzes Completed</CardTitle>
+                <CardTitle className="text-sm font-medium text-gray-600">{t('home.stats.quizzesCompleted')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-3xl font-bold">{stats.quizzes.length}</div>
@@ -60,7 +63,7 @@ export default function Home() {
 
         {/* Available Quizzes */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Available Quizzes</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('home.availableQuizzes')}</h2>
 
           {isLoading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -83,15 +86,15 @@ export default function Home() {
                     )}
                   </CardHeader>
                   <CardContent>
-                    <Button className="w-full">Start Quiz</Button>
+                    <Button className="w-full">{t('home.startQuiz')}</Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
           ) : (
             <div className="text-center py-12">
-              <p className="text-gray-600 mb-4">No quizzes available yet.</p>
-              <Button onClick={() => setLocation("/upload")}>Upload a Quiz</Button>
+              <p className="text-gray-600 mb-4">{t('home.noQuizzesAvailable')}</p>
+              <Button onClick={() => setLocation("/upload")}>{t('home.uploadQuiz')}</Button>
             </div>
           )}
         </div>
@@ -103,14 +106,14 @@ export default function Home() {
             onClick={() => setLocation("/upload")}
             className="px-6"
           >
-            Upload Quiz
+            {t('home.uploadQuiz')}
           </Button>
           <Button
             variant="outline"
             onClick={() => setLocation("/feedback")}
             className="px-6"
           >
-            Send Feedback
+            {t('home.sendFeedback')}
           </Button>
           {stats && stats.totalAttempts > 0 && (
             <Button
@@ -118,7 +121,7 @@ export default function Home() {
               onClick={() => setLocation("/history")}
               className="px-6"
             >
-              View History
+              {t('home.viewHistory')}
             </Button>
           )}
         </div>

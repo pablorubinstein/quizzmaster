@@ -7,8 +7,10 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { trpc } from "@/lib/trpc";
 import { getSessionId, QuizAttemptAnswer } from "@/lib/sessionManager";
+import { useTranslation } from "react-i18next";
 
 export default function Quiz() {
+  const { t } = useTranslation();
   const { quizId } = useParams<{ quizId: string }>();
   const [, setLocation] = useLocation();
   const [sessionId, setSessionId] = useState<string>("");
@@ -83,7 +85,7 @@ export default function Quiz() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading quiz...</p>
+          <p className="text-gray-600">{t('quiz.loadingQuiz')}</p>
         </div>
       </div>
     );
@@ -135,7 +137,7 @@ export default function Quiz() {
                     onClick={() => setLocation(`/review/${result.attemptId}/${quizId}`)}
                     className="px-6"
                   >
-                    Review Answers
+                    {t('quiz.reviewAnswers')}
                   </Button>
                   <Button
                     onClick={() => setLocation("/")}
