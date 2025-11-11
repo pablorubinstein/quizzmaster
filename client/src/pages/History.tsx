@@ -25,7 +25,7 @@ export default function History() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading history...</p>
+          <p className="text-gray-600">{t('common.loading')}</p>
         </div>
       </div>
     );
@@ -37,7 +37,7 @@ export default function History() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Quiz History</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('history.title')}</h1>
             <p className="text-gray-600">
               {attempts && attempts.length > 0
                 ? `You have completed ${attempts.length} quiz${attempts.length !== 1 ? "zes" : ""}`
@@ -75,7 +75,7 @@ export default function History() {
                       variant="outline"
                       className="w-full"
                     >
-                      View Details
+                      {t('history.viewDetails')}
                     </Button>
                   </CardContent>
                 </Card>
@@ -84,8 +84,8 @@ export default function History() {
           ) : (
             <Card>
               <CardContent className="pt-6 text-center">
-                <p className="text-gray-600 mb-4">No quiz attempts yet</p>
-                <Button onClick={() => setLocation("/")}>Take a Quiz</Button>
+                <p className="text-gray-600 mb-4">{t('history.noQuizAttempt')}</p>
+                <Button onClick={() => setLocation("/")}>{t('history.takeAQuiz')}</Button>
               </CardContent>
             </Card>
           )}
@@ -97,7 +97,7 @@ export default function History() {
               variant="outline"
               className="px-6"
             >
-              Back to Home
+              {t('history.backToHome')}
             </Button>
           </div>
         </div>

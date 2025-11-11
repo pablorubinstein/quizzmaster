@@ -144,7 +144,7 @@ export default function Quiz() {
                     variant="outline"
                     className="px-6"
                   >
-                    Back to Home
+                    {t('quiz.backToHome')}
                   </Button>
                 </div>
               </CardContent>

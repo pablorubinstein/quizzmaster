@@ -77,7 +77,9 @@
     "viewDetails": "Voir les Détails",
     "takeAQuiz": "Faire un Quiz",
     "totalAttempts": "Vous avez complété {{count}} quiz",
-    "totalAttempts_plural": "Vous avez complété {{count}} quiz"
+    "totalAttempts_plural": "Vous avez complété {{count}} quiz",
+    "backToHome": "Retour à l'Accueil",
+    "noQuizAttempts": "Aucune tentative"
   },
   "feedback": {
     "title": "Envoyer des Commentaires",

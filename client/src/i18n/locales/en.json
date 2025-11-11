@@ -76,7 +76,9 @@
     "viewDetails": "View Details",
     "takeAQuiz": "Take a Quiz",
     "totalAttempts": "You have completed {{count}} quiz",
-    "totalAttempts_plural": "You have completed {{count}} quizzes"
+    "totalAttempts_plural": "You have completed {{count}} quizzes",
+    "backToHome": "Back to Home",
+    "noQuizAttempts": "No quiz attempts yet"
   },
   "feedback": {
     "title": "Send Feedback",

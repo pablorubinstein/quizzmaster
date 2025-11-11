@@ -77,7 +77,9 @@
     "viewDetails": "Ver Detalles",
     "takeAQuiz": "Tomar un Cuestionario",
     "totalAttempts": "Has completado {{count}} cuestionario",
-    "totalAttempts_plural": "Has completado {{count}} cuestionarios"
+    "totalAttempts_plural": "Has completado {{count}} cuestionarios",
+    "backToHome": "Volver al Inicio",
+    "noQuizAttempts": "No hay intentos todavia"
   },
   "feedback": {
     "title": "Enviar Comentarios",
