@@ -29,6 +29,8 @@ i18n
   // Initialize i18next
   .init({
     resources,
+    supportedLngs: ['en', 'es', 'fr'],
+    nonExplicitSupportedLngs: true,
     fallbackLng: 'es',
     interpolation: {
       escapeValue: false, // React already escapes values

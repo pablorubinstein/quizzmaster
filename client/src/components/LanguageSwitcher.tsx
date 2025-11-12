@@ -14,15 +14,24 @@ import {
  * The selected language is persisted in localStorage automatically by i18next.
  */
 export default function LanguageSwitcher() {
-  const { i18n } = useTranslation();
+  const { i18n, ready } = useTranslation();
 
+  // abort if i18n is not yet initialized
+  if (!ready) {
+    console.warn("i18n is NOt ready yet");
+    return null; // or a loading spinner
+  }
+
+
+  // 🇫🇷 🇪🇸 🇬🇧
   const languages = [
-    { code: 'en', name: 'English', flag: '🇬🇧' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'en', name: 'English', flag: '🇬🇧' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
   ];
 
-  const currentLanguage = languages.find((lang) => lang.code === i18n.language);
+  // we split because 'en-US' -> 'en'. We also provide a default to 'es'
+  const currentLanguage = languages.find((lang) => lang.code === i18n.language.split('-')[0]) ?? languages[0];
 
   const handleLanguageChange = (languageCode: string) => {
     i18n.changeLanguage(languageCode);
@@ -32,7 +41,7 @@ export default function LanguageSwitcher() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm">
-          {currentLanguage?.flag} {currentLanguage?.name}
+          {currentLanguage.flag} {currentLanguage.name}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
