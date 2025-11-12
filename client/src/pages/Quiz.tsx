@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
@@ -124,11 +125,13 @@ export default function Quiz() {
 
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <p className="text-gray-700">
-                    {result.percentage >= 80
-                      ? "Excellent work! You've mastered this quiz."
-                      : result.percentage >= 60
-                      ? "Good job! Keep practicing to improve."
-                      : "Keep trying! Review the missed questions and try again."}
+                    {
+                      result.percentage >= 80
+                        ? "Excellent work! You've mastered this quiz."
+                        : result.percentage >= 60
+                          ? "Good job! Keep practicing to improve."
+                          : "Keep trying! Review the missed questions and try again."
+                    }
                   </p>
                 </div>
 
@@ -178,6 +181,14 @@ export default function Quiz() {
               <CardTitle className="text-xl">{question.question}</CardTitle>
             </CardHeader>
             <CardContent>
+              <img
+                height="200"
+                width="200"
+                src='https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/55/90/2e/55902ef3-485a-3d2c-d60c-33a9c765d038/AppIcon-0-0-1x_U007epad-0-1-85-220.png/400x400ia-75.webp'
+              />
+
+              <Separator></Separator>
+
               <RadioGroup value={selectedAnswer} onValueChange={setSelectedAnswer}>
                 <div className="space-y-3">
                   {question.options.map((option, index) => (

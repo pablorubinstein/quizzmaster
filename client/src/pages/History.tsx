@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { trpc } from "@/lib/trpc";
 import { getSessionId } from "@/lib/sessionManager";
 import { useTranslation } from 'react-i18next';
-
 export default function History() {
   const { t } = useTranslation();
   const [, setLocation] = useLocation();
@@ -42,8 +41,7 @@ export default function History() {
               {
                 !attempts 
                 ? t('history.noAttempts')
-                : 
-                  attempts.length == 1
+                : attempts.length == 1
                   ? t('history.totalAttempts', { count: attempts.length })
                   : t('history.totalAttempts_plural', { count: attempts.length })
               }

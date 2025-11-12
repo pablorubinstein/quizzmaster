@@ -6,6 +6,47 @@ import { getSessionId } from "@/lib/sessionManager";
 import { useLocation } from "wouter";
 import { useTranslation } from 'react-i18next';
 
+type AttemptSummary = {
+  id: number;
+  quizId: number;
+  score: number;
+  totalQuestions: number;
+  percentage: number;
+  completedAt: Date;
+};
+
+// function hasQuizAttempt(attempts: AttemptSummary[], quizId: number): boolean {
+//   return attempts.some((attempt) => attempt.quizId === quizId);
+// }
+
+function getPercentageForQuizId(attempts: AttemptSummary[], quizId: number): number {
+  let found = attempts.filter((attempt) => attempt.quizId === quizId);
+  if (found.length >= 1) {
+    return found[found.length -1].percentage; // get the last percentage
+  } else {
+    return 0;
+  }
+}
+
+function getColorForPercentage(percentage: number): string {
+  let color = 'white';
+  if (percentage == 0) {
+    color = 'white';
+  } else if (percentage > 0 && percentage <= 20) {
+    color = 'indianred';
+  } else if (percentage > 20 && percentage <= 50) {
+    color = 'lighcoral';
+  } else if (percentage > 50 && percentage <= 75) {
+    color = 'lightpink';
+  } else if (percentage > 75 && percentage < 100) {
+    color = 'aquamarine';
+  } else if (percentage === 100) {
+    color = 'lightgreen';
+  }
+
+  return color;
+}
+
 export default function Home() {
   const { t } = useTranslation();
 
@@ -16,8 +57,12 @@ export default function Home() {
     setSessionId(getSessionId());
   }, []);
 
-  const { data: quizzes, isLoading } = trpc.quiz.listQuizzes.useQuery();
-  const { data: stats } = trpc.quiz.getSessionStats.useQuery(
+  const { data: quizzes, isLoading: isLoading1 } = trpc.quiz.listQuizzes.useQuery();
+  const { data: stats, isLoading: isLoading2 } = trpc.quiz.getSessionStats.useQuery(
+    { sessionId },
+    { enabled: !!sessionId }
+  );
+  const { data: history, isLoading: isLoading3 } = trpc.quiz.getSessionAttempts.useQuery(
     { sessionId },
     { enabled: !!sessionId }
   );
@@ -65,25 +110,31 @@ export default function Home() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('home.availableQuizzes')}</h2>
 
-          {isLoading ? (
+          {isLoading1 || isLoading2 || isLoading3 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="h-40 bg-gray-200 rounded-lg animate-pulse" />
               ))}
             </div>
-          ) : quizzes && quizzes.length > 0 ? (
+          ) : quizzes && quizzes.length > 0 && history ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {quizzes.map((quiz) => (
+                
                 <Card
                   key={quiz.id}
                   className="hover:shadow-lg transition-shadow cursor-pointer"
                   onClick={() => setLocation(`/quiz/${quiz.id}`)}
+                  style={{backgroundColor: getColorForPercentage(getPercentageForQuizId(history, quiz.id))}}
                 >
                   <CardHeader>
                     <CardTitle className="text-lg">{quiz.title}</CardTitle>
                     {quiz.description && (
                       <CardDescription className="line-clamp-2">{quiz.description}</CardDescription>
                     )}
+
+                    {
+                      getPercentageForQuizId(history, quiz.id).toString() + '% DONE'
+                    }
                   </CardHeader>
                   <CardContent>
                     <Button className="w-full">{t('home.startQuiz')}</Button>
