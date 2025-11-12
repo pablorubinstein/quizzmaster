@@ -50,7 +50,8 @@
     "timeRemaining": "Tiempo Restante",
     "noTimeLimit": "Sin límite de tiempo",
     "loadingQuiz": "Cargando cuestionario...",
-    "reviewAnswers": "Revisar Respuestas"
+    "reviewAnswers": "Revisar Respuestas",
+    "backToHome": "Volver al Inicio"
   },
   "review": {
     "title": "Revisión del Cuestionario",

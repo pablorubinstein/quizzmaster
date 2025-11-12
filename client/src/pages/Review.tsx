@@ -6,10 +6,8 @@ import { trpc } from "@/lib/trpc";
 import { getSessionId } from "@/lib/sessionManager";
 import { useTranslation } from 'react-i18next';
 
-// // PABLO
-// const { t, i18n } = useTranslation();
-
 export default function Review() {
+  const { t, i18n } = useTranslation();
   const { attemptId, quizId } = useParams<{ attemptId: string; quizId: string }>();
   const [, setLocation] = useLocation();
   const [sessionId, setSessionId] = useState<string>("");
@@ -205,10 +203,10 @@ export default function Review() {
           <div className="flex gap-4 justify-center">
             {missedQuestions.length > 0 && (
               <Button
-                onClick={() => setLocation("/")}
+                onClick={() => setLocation(`/quiz/${quizId}`)}
                 className="px-6"
               >
-                Retake Quiz
+                {t('review.retakeQuiz')}
               </Button>
             )}
             <Button
@@ -216,7 +214,7 @@ export default function Review() {
               variant="outline"
               className="px-6"
             >
-              Back to Home
+              {t('review.backToHome')}
             </Button>
           </div>
         </div>

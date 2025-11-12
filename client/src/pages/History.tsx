@@ -39,9 +39,14 @@ export default function History() {
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('history.title')}</h1>
             <p className="text-gray-600">
-              {attempts && attempts.length > 0
-                ? `You have completed ${attempts.length} quiz${attempts.length !== 1 ? "zes" : ""}`
-                : "You haven't completed any quizzes yet"}
+              {
+                !attempts 
+                ? t('history.noAttempts')
+                : 
+                  attempts.length == 1
+                  ? t('history.totalAttempts', { count: attempts.length })
+                  : t('history.totalAttempts_plural', { count: attempts.length })
+              }
             </p>
           </div>
 
@@ -53,7 +58,9 @@ export default function History() {
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
                       <div>
-                        <CardTitle className="text-lg">{t('history.attemptNumber', { number: attempts.length - index})}</CardTitle>
+                        {/* Lo comente porque estaban des-sincronizados los labels con los indices */}
+                        {/* <CardTitle className="text-lg">{t('history.attemptNumber', { number: attempts.length - index})}</CardTitle> */}
+                        <CardTitle className="text-lg">{t('history.attemptNumber', { number: attempt.id})}</CardTitle>
                         <p className="text-sm text-gray-500 mt-1">
                           {new Date(attempt.completedAt).toLocaleDateString()} at{" "}
                           {new Date(attempt.completedAt).toLocaleTimeString()}
@@ -84,7 +91,7 @@ export default function History() {
           ) : (
             <Card>
               <CardContent className="pt-6 text-center">
-                <p className="text-gray-600 mb-4">{t('history.noQuizAttempt')}</p>
+                <p className="text-gray-600 mb-4">{t('history.noQuizAttempts')}</p>
                 <Button onClick={() => setLocation("/")}>{t('history.takeAQuiz')}</Button>
               </CardContent>
             </Card>

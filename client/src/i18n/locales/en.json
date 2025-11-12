@@ -49,7 +49,8 @@
     "timeRemaining": "Time Remaining",
     "noTimeLimit": "No time limit",
     "loadingQuiz": "Loading quiz...",
-    "reviewAnswers": "Review Answers"
+    "reviewAnswers": "Review Answers",
+    "backToHome": "Back to Home"
   },
   "review": {
     "title": "Quiz Review",

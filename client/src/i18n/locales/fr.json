@@ -50,7 +50,8 @@
     "timeRemaining": "Temps Restant",
     "noTimeLimit": "Pas de limite de temps",
     "loadingQuiz": "Chargement du quiz...",
-    "reviewAnswers": "Examiner les réponses"
+    "reviewAnswers": "Examiner les réponses",
+    "backToHome": "Retour à l'Accueil"
   },
   "review": {
     "title": "Révision du Quiz",
