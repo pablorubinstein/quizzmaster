@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Maestro de Cuestionarios",
+    "appName": "Quiz Master",
     "appDescription": "Prueba tus conocimientos con cuestionarios interactivos",
     "loading": "Cargando...",
     "error": "Error",
