@@ -71,10 +71,10 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">{t('home.title')}</h1>
-          <p className="text-lg text-gray-600">{t('home.subtitle')}</p>
-        </div>
+        {/* <div className="mb-12"> */}
+          {/* <h1 className="text-4xl font-bold text-gray-900 mb-2">{t('home.title')}</h1> */}
+          {/* <p className="text-lg text-gray-600">{t('home.subtitle')}</p> */}
+        {/* </div> */}
 
         {/* User Stats */}
         {stats && stats.totalAttempts > 0 && (
@@ -133,7 +133,7 @@ export default function Home() {
                     )}
 
                     {
-                      getPercentageForQuizId(history, quiz.id).toString() + '% DONE'
+                      getPercentageForQuizId(history, quiz.id).toString() + '%'
                     }
                   </CardHeader>
                   <CardContent>
@@ -145,14 +145,14 @@ export default function Home() {
           ) : (
             <div className="text-center py-12">
               <p className="text-gray-600 mb-4">{t('home.noQuizzesAvailable')}</p>
-              <Button onClick={() => setLocation("/upload")}>{t('home.uploadQuiz')}</Button>
+              {/* <Button onClick={() => setLocation("/upload")}>{t('home.uploadQuiz')}</Button> */}
             </div>
           )}
         </div>
 
         {/* Action Buttons */}
         <div className="flex gap-4 justify-center">
-          <Button
+          {/* <Button
             variant="outline"
             onClick={() => setLocation("/upload")}
             className="px-6"
@@ -165,7 +165,7 @@ export default function Home() {
             className="px-6"
           >
             {t('home.sendFeedback')}
-          </Button>
+          </Button> */}
           {stats && stats.totalAttempts > 0 && (
             <Button
               variant="outline"
