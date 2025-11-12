@@ -67,7 +67,8 @@
     "retakeQuiz": "Reprendre le Quiz",
     "backToHome": "Retour à l'Accueil",
     "question": "Question",
-    "options": "Options"
+    "options": "Options",
+    "stats": "Vous avez {{correctCount}} de {{n_answers}} questions correctes ({{percentage}}%)"
   },
   "history": {
     "title": "Historique des Quiz",

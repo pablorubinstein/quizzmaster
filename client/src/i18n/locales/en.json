@@ -66,7 +66,8 @@
     "retakeQuiz": "Retake Quiz",
     "backToHome": "Back to Home",
     "question": "Question",
-    "options": "Options"
+    "options": "Options",
+    "stats": "You got {{correctCount}} out of {{n_answers}} questions correct ({{percentage}}%)"
   },
   "history": {
     "title": "Quiz History",

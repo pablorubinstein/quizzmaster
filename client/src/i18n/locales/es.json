@@ -67,7 +67,8 @@
     "retakeQuiz": "Repetir Cuestionario",
     "backToHome": "Volver al Inicio",
     "question": "Pregunta",
-    "options": "Opciones"
+    "options": "Opciones",
+    "stats": "Tienes {{correctCount}} de {{n_answers}} preguntas correctas ({{percentage}}%)"
   },
   "history": {
     "title": "Historial de Cuestionarios",

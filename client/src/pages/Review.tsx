@@ -7,7 +7,7 @@ import { getSessionId } from "@/lib/sessionManager";
 import { useTranslation } from 'react-i18next';
 
 export default function Review() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { attemptId, quizId } = useParams<{ attemptId: string; quizId: string }>();
   const [, setLocation] = useLocation();
   const [sessionId, setSessionId] = useState<string>("");
@@ -37,7 +37,7 @@ export default function Review() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-600 mb-4">Review not found</p>
-          <Button onClick={() => setLocation("/")}>Back to Home</Button>
+          <Button onClick={() => setLocation("/")}>{t('review.backToHome')}</Button>
         </div>
       </div>
     );
@@ -53,10 +53,10 @@ export default function Review() {
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Quiz Review</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('review.title')}</h1>
             <div className="flex items-center justify-between">
               <p className="text-gray-600">
-                You got {correctCount} out of {answers.length} questions correct ({percentage}%)
+                {t('review.stats', { correctCount: correctCount, n_answers: answers.length, percentage: percentage })}
               </p>
               <div className="text-3xl font-bold text-blue-600">{percentage}%</div>
             </div>
@@ -65,24 +65,24 @@ export default function Review() {
           {/* Missed Questions Section */}
           {missedQuestions.length > 0 && (
             <div className="space-y-4 mb-8">
-              <h2 className="text-xl font-bold text-gray-900">Questions to Review</h2>
+              <h2 className="text-xl font-bold text-gray-900">{t('review.questionsToReview')}</h2>
               {missedQuestions.map((answer, index) => (
                 <Card key={index} className="border-l-4 border-l-red-500">
                   <CardHeader>
                     <CardTitle className="text-lg">
-                      Question {answer.questionIndex + 1}
+                      {t('review.question')} {answer.questionIndex + 1}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     {/* Original Question */}
                     <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-2">Question:</p>
+                      <p className="text-sm font-semibold text-gray-700 mb-2">{t('review.question')}:</p>
                       <p className="text-gray-900 font-medium">{answer.question}</p>
                     </div>
 
                     {/* Options */}
                     <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-2">Options:</p>
+                      <p className="text-sm font-semibold text-gray-700 mb-2">{t('review.options')}:</p>
                       <div className="space-y-2">
                         {answer.options.map((option, optIndex) => (
                           <div
@@ -98,10 +98,10 @@ export default function Review() {
                             <p className="text-sm">
                               <span className="font-semibold">{String.fromCharCode(65 + optIndex)})</span> {option}
                               {option === answer.correctAnswer && (
-                                <span className="ml-2 text-green-600 font-semibold">✓ Correct</span>
+                                <span className="ml-2 text-green-600 font-semibold">✓ {t('review.correct')}</span>
                               )}
                               {option === answer.selectedAnswer && option !== answer.correctAnswer && (
-                                <span className="ml-2 text-red-600 font-semibold">✗ Your answer</span>
+                                <span className="ml-2 text-red-600 font-semibold">✗ {t('review.yourAnswer')}</span>
                               )}
                             </p>
                           </div>
@@ -112,11 +112,11 @@ export default function Review() {
                     {/* Your Answer vs Correct Answer */}
                     <div className="grid grid-cols-2 gap-4 pt-2 border-t">
                       <div>
-                        <p className="text-sm font-semibold text-gray-700 mb-1">Your Answer:</p>
+                        <p className="text-sm font-semibold text-gray-700 mb-1">{t('review.yourAnswer')}:</p>
                         <p className="text-red-600 font-medium">{answer.selectedAnswer}</p>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-gray-700 mb-1">Correct Answer:</p>
+                        <p className="text-sm font-semibold text-gray-700 mb-1">{t('review.correctAnswer')}:</p>
                         <p className="text-green-600 font-medium">{answer.correctAnswer}</p>
                       </div>
                     </div>
@@ -128,7 +128,7 @@ export default function Review() {
 
           {/* All Answers Section */}
           <div className="space-y-4 mb-8">
-            <h2 className="text-xl font-bold text-gray-900">All Answers</h2>
+            <h2 className="text-xl font-bold text-gray-900">{t('review.allAnswers')}</h2>
             {answers.map((answer, index) => (
               <Card
                 key={index}
@@ -138,7 +138,7 @@ export default function Review() {
               >
                 <CardHeader>
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-lg">Question {answer.questionIndex + 1}</CardTitle>
+                    <CardTitle className="text-lg">{t('review.question')} {answer.questionIndex + 1}</CardTitle>
                     {answer.isCorrect && (
                       <span className="text-green-600 font-bold text-lg">✓</span>
                     )}
@@ -150,13 +150,13 @@ export default function Review() {
                 <CardContent className="space-y-4">
                   {/* Original Question */}
                   <div>
-                    <p className="text-sm font-semibold text-gray-700 mb-2">Question:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">{t('review.question')}:</p>
                     <p className="text-gray-900 font-medium">{answer.question}</p>
                   </div>
 
                   {/* Options */}
                   <div>
-                    <p className="text-sm font-semibold text-gray-700 mb-2">Options:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-2">{t('review.options')}:</p>
                     <div className="space-y-2">
                       {answer.options.map((option, optIndex) => (
                         <div
@@ -172,10 +172,10 @@ export default function Review() {
                           <p className="text-sm">
                             <span className="font-semibold">{String.fromCharCode(65 + optIndex)})</span> {option}
                             {option === answer.correctAnswer && (
-                              <span className="ml-2 text-green-600 font-semibold">✓ Correct</span>
+                              <span className="ml-2 text-green-600 font-semibold">✓ {t('review.correct')}</span>
                             )}
                             {option === answer.selectedAnswer && !answer.isCorrect && (
-                              <span className="ml-2 text-red-600 font-semibold">✗ Your answer</span>
+                              <span className="ml-2 text-red-600 font-semibold">✗ {t('review.yourAnswer')}</span>
                             )}
                           </p>
                         </div>
@@ -185,7 +185,7 @@ export default function Review() {
 
                   {/* Answer Summary */}
                   <div className="pt-2 border-t">
-                    <p className="text-sm font-semibold text-gray-700 mb-1">Your Answer:</p>
+                    <p className="text-sm font-semibold text-gray-700 mb-1">{t('review.yourAnswer')}:</p>
                     <p
                       className={`font-medium ${
                         answer.isCorrect ? "text-green-600" : "text-red-600"
