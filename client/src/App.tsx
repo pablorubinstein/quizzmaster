@@ -11,6 +11,8 @@ import Feedback from "./pages/Feedback";
 import History from "./pages/History";
 import Upload from "./pages/Upload";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import UserAvatar from "@/components/UserAvatar";
+
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -44,9 +46,12 @@ function App() {
         <TooltipProvider>
           <Toaster />
           {/* Add Language Switcher to Header */}
-          <div className="flex justify-between items-center p-4 border-b">
+          <div className="flex justify-between p-4 border-b">
             <h1 className="text-2xl font-bold">Quiz Master</h1>
-            <LanguageSwitcher />
+            <div className="flex flex-end items-right">
+              <UserAvatar />
+              <LanguageSwitcher />
+            </div>
           </div>
           <Router />
         </TooltipProvider>
