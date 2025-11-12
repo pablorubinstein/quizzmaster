@@ -13,6 +13,52 @@ import {
   getOrCreateUserSession,
 } from "../db";
 
+
+function createSeededPRNG(seed: number) {
+  let state = seed;
+  const a = 1103515245;
+  const c = 12345;
+  const m = 2**31; // Modulus
+
+  return function() {
+    state = (a * state + c) % m;
+    return state / m; // Return a value between 0 (inclusive) and 1 (exclusive)
+  };
+}
+
+// Deterministic Fisher-Yates shuffle
+function deterministicShuffle(qd: QuizData, seed: number) {
+  const prng = createSeededPRNG(seed);
+  let array = qd.questions;
+  const shuffledArray = [...array]; // Create a shallow copy to avoid modifying the original
+
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(prng() * (i + 1)); // Use the seeded PRNG
+    [shuffledArray[i].options, shuffledArray[j].options] = [shuffledArray[j].options, shuffledArray[i].options];
+  }
+
+  qd.questions = shuffledArray;
+  return qd;
+}
+
+// function shuffle(quizdata: QuizData) {
+  
+//   let some_array = quizdata.questions;
+//   let currentIndex = some_array.length;
+
+//   // While there remain elements to shuffle...
+//   while (currentIndex != 0) {
+
+//     // Pick a remaining element...
+//     let randomIndex = Math.floor(Math.random() * currentIndex);
+//     currentIndex--;
+
+//     // And swap it with the current element.
+//     [some_array[currentIndex], some_array[randomIndex]] = [
+//       some_array[randomIndex], some_array[currentIndex]];
+//   }
+// }
+
 /**
  * Quiz data structure stored in the database
  */
@@ -54,17 +100,19 @@ export const quizRouter = router({
       let quizData: QuizData;
       try {
         quizData = JSON.parse(quiz.content);
+        // quizData = deterministicShuffle(quizData, quiz.id);
       } catch (error) {
         throw new Error("Invalid quiz data format");
       }
 
-      return {
+      let qd = {
         id: quiz.id,
         title: quiz.title,
         description: quiz.description,
         questions: quizData.questions,
         createdAt: quiz.createdAt,
       };
+      return qd;
     }),
 
   /**
@@ -96,6 +144,7 @@ export const quizRouter = router({
       let quizData: QuizData;
       try {
         quizData = JSON.parse(quiz.content);
+        // quizData = deterministicShuffle(quizData, quiz.id);
       } catch (error) {
         throw new Error("Invalid quiz data format");
       }
