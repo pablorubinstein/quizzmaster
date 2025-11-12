@@ -181,13 +181,13 @@ export default function Quiz() {
               <CardTitle className="text-xl">{question.question}</CardTitle>
             </CardHeader>
             <CardContent>
-              <img
+              {/* <img
                 height="200"
                 width="200"
                 src='https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/55/90/2e/55902ef3-485a-3d2c-d60c-33a9c765d038/AppIcon-0-0-1x_U007epad-0-1-85-220.png/400x400ia-75.webp'
               />
 
-              <Separator></Separator>
+              <Separator></Separator> */}
 
               <RadioGroup value={selectedAnswer} onValueChange={setSelectedAnswer}>
                 <div className="space-y-3">
