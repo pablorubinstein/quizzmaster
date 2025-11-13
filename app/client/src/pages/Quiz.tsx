@@ -49,7 +49,6 @@ export default function Quiz() {
   useEffect(() => {
     if (quiz && quiz.randomizationSeed) {
       setRandomizationSeed(quiz.randomizationSeed);
-      console.log("randomization seed:", quiz.randomizationSeed);
 
       // Randomize questions
       const randomized = randomizeQuestions(quiz.questions, quiz.randomizationSeed);
