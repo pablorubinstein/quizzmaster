@@ -1,14 +1,28 @@
-import { useEffect, useState } from "react";
+import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
 import { useLocation, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { trpc } from "@/lib/trpc";
 import { getSessionId, QuizAttemptAnswer } from "@/lib/sessionManager";
 import { useTranslation } from "react-i18next";
+import {
+  randomizeQuestions,
+  randomizeOptions,
+  createOptionIndexMap,
+  RandomizedQuestion,
+  RandomizedOption
+} from "@shared/randomUtils";
+
+interface RandomizedQuestionWithOptions extends RandomizedQuestion<any> {
+  question: any & {
+    randomizedOptions: RandomizedOption<string>[];
+    optionIndexMap: Map<number, number>;
+  };
+}
 
 export default function Quiz() {
   const { t } = useTranslation();
@@ -19,6 +33,8 @@ export default function Quiz() {
   const [answers, setAnswers] = useState<QuizAttemptAnswer[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState<string>("");
   const [submitted, setSubmitted] = useState(false);
+  const [randomizedQuestions, setRandomizedQuestions] = useState<RandomizedQuestionWithOptions[]>([]);
+  const [randomizationSeed, setRandomizationSeed] = useState<number>(0);
 
   useEffect(() => {
     setSessionId(getSessionId());
@@ -29,51 +45,107 @@ export default function Quiz() {
     { enabled: !!quizId }
   );
 
+// Randomize questions and options when quiz loads
+  useEffect(() => {
+    if (quiz && quiz.randomizationSeed) {
+      setRandomizationSeed(quiz.randomizationSeed);
+      console.log("randomization seed:", quiz.randomizationSeed);
+
+      // Randomize questions
+      const randomized = randomizeQuestions(quiz.questions, quiz.randomizationSeed);
+
+      // Randomize options for each question
+      const questionsWithRandomizedOptions = randomized.map((item, index) => {
+        const questionSeed = quiz.randomizationSeed + index; // Different seed for each question
+        const randomizedOpts = randomizeOptions(item.question.options, questionSeed);
+
+        return {
+          ...item,
+          question: {
+            ...item.question,
+            randomizedOptions: randomizedOpts,
+            optionIndexMap: createOptionIndexMap(randomizedOpts),
+          },
+        };
+      });
+
+      setRandomizedQuestions(questionsWithRandomizedOptions);
+    }
+  }, [quiz]);
+
   const submitMutation = trpc.quiz.submitQuizAttempt.useMutation();
+
+  const getCurrentRandomizedQuestion = () => {
+    return randomizedQuestions[currentQuestion];
+  };
 
   const handleNext = () => {
     if (selectedAnswer) {
+      const currentRandomized = getCurrentRandomizedQuestion();
+      if (!currentRandomized) return;
+
+      // Map the selected randomized option back to original index
+      const optionIndexMap = currentRandomized.question.optionIndexMap;
+      const originalOptionIndex = optionIndexMap.get(
+        currentRandomized.question.randomizedOptions.findIndex(
+          (opt: { option: string; }) => opt.option === selectedAnswer
+        )
+      );
+
       const newAnswers = [...answers];
-      newAnswers[currentQuestion] = {
-        questionIndex: currentQuestion,
+      newAnswers[currentRandomized.originalIndex] = {
+        questionIndex: currentRandomized.originalIndex,
         selectedAnswer,
       };
       setAnswers(newAnswers);
 
-      if (currentQuestion < (quiz?.questions.length || 0) - 1) {
+      if (currentQuestion < randomizedQuestions.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
-        setSelectedAnswer(newAnswers[currentQuestion + 1]?.selectedAnswer || "");
+        const nextRandomized = randomizedQuestions[currentQuestion + 1];
+        setSelectedAnswer(
+          newAnswers[nextRandomized.originalIndex]?.selectedAnswer || ""
+        );
       }
     }
   };
 
   const handlePrevious = () => {
     if (currentQuestion > 0) {
+      const currentRandomized = getCurrentRandomizedQuestion();
+      if (!currentRandomized) return;
+
       const newAnswers = [...answers];
-      newAnswers[currentQuestion] = {
-        questionIndex: currentQuestion,
+      newAnswers[currentRandomized.originalIndex] = {
+        questionIndex: currentRandomized.originalIndex,
         selectedAnswer,
       };
       setAnswers(newAnswers);
 
       setCurrentQuestion(currentQuestion - 1);
-      setSelectedAnswer(newAnswers[currentQuestion - 1]?.selectedAnswer || "");
+      const prevRandomized = randomizedQuestions[currentQuestion - 1];
+      setSelectedAnswer(
+        newAnswers[prevRandomized.originalIndex]?.selectedAnswer || ""
+      );
     }
   };
 
-  const handleSubmit = async () => {
-    if (selectedAnswer) {
+ const handleSubmit = async () => {
+    if (selectedAnswer && randomizedQuestions.length > 0) {
+      const currentRandomized = getCurrentRandomizedQuestion();
+      if (!currentRandomized) return;
+
       const newAnswers = [...answers];
-      newAnswers[currentQuestion] = {
-        questionIndex: currentQuestion,
+      newAnswers[currentRandomized.originalIndex] = {
+        questionIndex: currentRandomized.originalIndex,
         selectedAnswer,
       };
       setAnswers(newAnswers);
 
-      // Submit all answers
+      // Submit all answers with randomization seed
       await submitMutation.mutateAsync({
         sessionId,
         quizId: parseInt(quizId || "0"),
+        randomizationSeed,
         answers: newAnswers,
       });
 
@@ -81,7 +153,7 @@ export default function Quiz() {
     }
   };
 
-  if (isLoading) {
+  if (isLoading || randomizedQuestions.length === 0) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -111,7 +183,7 @@ export default function Quiz() {
           <div className="max-w-2xl mx-auto">
             <Card className="border-2 border-green-500">
               <CardHeader className="text-center">
-                <CardTitle className="text-3xl">Quiz Complete!</CardTitle>
+                <CardTitle className="text-3xl">{t('quiz.quizComplete')}</CardTitle>
               </CardHeader>
               <CardContent className="text-center space-y-6">
                 <div>
@@ -119,7 +191,7 @@ export default function Quiz() {
                     {result.percentage}%
                   </div>
                   <p className="text-xl text-gray-600">
-                    You got {result.score} out of {result.totalQuestions} questions correct
+                    {t('quiz.stats', { correctCount: result.score, n_answers: result.totalQuestions })}
                   </p>
                 </div>
 
@@ -129,8 +201,8 @@ export default function Quiz() {
                       result.percentage >= 80
                         ? "Excellent work! You've mastered this quiz."
                         : result.percentage >= 60
-                          ? "Good job! Keep practicing to improve."
-                          : "Keep trying! Review the missed questions and try again."
+                          ? t('quiz.goodJob')
+                          : t('quiz.keepTrying')
                     }
                   </p>
                 </div>
@@ -158,8 +230,11 @@ export default function Quiz() {
     );
   }
 
-  const question = quiz.questions[currentQuestion];
-  const progress = ((currentQuestion + 1) / quiz.questions.length) * 100;
+  const currentRandomized = getCurrentRandomizedQuestion();
+  if (!currentRandomized) return null;
+
+  const currentQuizQuestion = currentRandomized.question;
+  const progress = ((currentQuestion + 1) / randomizedQuestions.length) * 100;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8">
@@ -169,7 +244,7 @@ export default function Quiz() {
           <div className="mb-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">{quiz.title}</h1>
             <div className="flex justify-between text-sm text-gray-600 mb-2">
-              <span>Question {currentQuestion + 1} of {quiz.questions.length}</span>
+              <span>{t('quiz.question')} {currentQuestion + 1} {t('quiz.of')} {randomizedQuestions.length}</span>
               <span>{Math.round(progress)}%</span>
             </div>
             <Progress value={progress} className="h-2" />
@@ -178,7 +253,7 @@ export default function Quiz() {
           {/* Question Card */}
           <Card className="mb-6">
             <CardHeader>
-              <CardTitle className="text-xl">{question.question}</CardTitle>
+              <CardTitle className="text-xl">{currentQuizQuestion.question}</CardTitle>
             </CardHeader>
             <CardContent>
               {/* <img
@@ -191,14 +266,11 @@ export default function Quiz() {
 
               <RadioGroup value={selectedAnswer} onValueChange={setSelectedAnswer}>
                 <div className="space-y-3">
-                  {question.options.map((option, index) => (
+                  {currentQuizQuestion.randomizedOptions.map((opt: { option: string }, index: Key | null | undefined) => (
                     <div key={index} className="flex items-center space-x-2">
-                      <RadioGroupItem value={option} id={`option-${index}`} />
-                      <Label
-                        htmlFor={`option-${index}`}
-                        className="flex-1 cursor-pointer p-2 rounded hover:bg-gray-100"
-                      >
-                        {option}
+                      <RadioGroupItem value={opt.option} id={`option-${index}`} />
+                      <Label htmlFor={`option-${index}`} className="cursor-pointer flex-1">
+                        {opt.option}
                       </Label>
                     </div>
                   ))}
@@ -214,10 +286,10 @@ export default function Quiz() {
               disabled={currentQuestion === 0}
               variant="outline"
             >
-              Previous
+              {t('common.previous')}
             </Button>
 
-            {currentQuestion === quiz.questions.length - 1 ? (
+            {currentQuestion === randomizedQuestions.length - 1 ? (
               <Button
                 onClick={handleSubmit}
                 disabled={!selectedAnswer || submitMutation.isPending}
@@ -231,7 +303,7 @@ export default function Quiz() {
                 disabled={!selectedAnswer}
                 className="px-8"
               >
-                Next
+                {t('common.next')}
               </Button>
             )}
           </div>

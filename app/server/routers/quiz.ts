@@ -12,52 +12,7 @@ import {
   submitQuizFeedback,
   getOrCreateUserSession,
 } from "../db";
-
-
-function createSeededPRNG(seed: number) {
-  let state = seed;
-  const a = 1103515245;
-  const c = 12345;
-  const m = 2**31; // Modulus
-
-  return function() {
-    state = (a * state + c) % m;
-    return state / m; // Return a value between 0 (inclusive) and 1 (exclusive)
-  };
-}
-
-// Deterministic Fisher-Yates shuffle
-function deterministicShuffle(qd: QuizData, seed: number) {
-  const prng = createSeededPRNG(seed);
-  let array = qd.questions;
-  const shuffledArray = [...array]; // Create a shallow copy to avoid modifying the original
-
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(prng() * (i + 1)); // Use the seeded PRNG
-    [shuffledArray[i].options, shuffledArray[j].options] = [shuffledArray[j].options, shuffledArray[i].options];
-  }
-
-  qd.questions = shuffledArray;
-  return qd;
-}
-
-// function shuffle(quizdata: QuizData) {
-  
-//   let some_array = quizdata.questions;
-//   let currentIndex = some_array.length;
-
-//   // While there remain elements to shuffle...
-//   while (currentIndex != 0) {
-
-//     // Pick a remaining element...
-//     let randomIndex = Math.floor(Math.random() * currentIndex);
-//     currentIndex--;
-
-//     // And swap it with the current element.
-//     [some_array[currentIndex], some_array[randomIndex]] = [
-//       some_array[randomIndex], some_array[currentIndex]];
-//   }
-// }
+import { generateRandomSeed } from "@shared/randomUtils";
 
 /**
  * Quiz data structure stored in the database
@@ -97,10 +52,14 @@ export const quizRouter = router({
         throw new Error("Quiz not found");
       }
 
+      // Generate a random seed for this quiz attempt
+      const randomizationSeed = generateRandomSeed();
+
       let quizData: QuizData;
+      // let quizDataRand: RandomizedQuestion<QuizData>;
       try {
         quizData = JSON.parse(quiz.content);
-        // quizData = deterministicShuffle(quizData, quiz.id);
+        // quizDataRand = randomizeQuestions(quizData.questions, randomizationSeed);
       } catch (error) {
         throw new Error("Invalid quiz data format");
       }
@@ -110,6 +69,7 @@ export const quizRouter = router({
         title: quiz.title,
         description: quiz.description,
         questions: quizData.questions,
+        randomizationSeed,
         createdAt: quiz.createdAt,
       };
       return qd;
@@ -123,6 +83,7 @@ export const quizRouter = router({
       z.object({
         sessionId: z.string(),
         quizId: z.number(),
+        randomizationSeed: z.number(),
         answers: z.array(
           z.object({
             questionIndex: z.number(),
@@ -162,12 +123,13 @@ export const quizRouter = router({
         answerDetails.push({ questionIndex: answer.questionIndex, isCorrect });
       }
 
-      // Create attempt record
+      // Create attempt record with randomization seed
       const attemptResult = await createQuizAttempt(
         input.sessionId,
         input.quizId,
         score,
-        quizData.questions.length
+        quizData.questions.length,
+        input.randomizationSeed
       );
 
       if (!attemptResult) {
@@ -218,6 +180,7 @@ export const quizRouter = router({
       return attempts.map((attempt) => ({
         id: attempt.id,
         quizId: attempt.quizId,
+        randomizationSeed: attempt.randomizationSeed,
         score: attempt.score,
         totalQuestions: attempt.totalQuestions,
         percentage: Math.round((attempt.score / attempt.totalQuestions) * 100),

@@ -140,12 +140,12 @@ export async function getOrCreateUserSession(sessionId: string) {
 /**
  * Quiz attempt queries
  */
-export async function createQuizAttempt(sessionId: string, quizId: number, score: number, totalQuestions: number) {
+export async function createQuizAttempt(sessionId: string, quizId: number, score: number, totalQuestions: number, randomizationSeed: number) {
   const db = await getDb();
   if (!db) return undefined;
 
   try {
-    const result = await db.insert(quizAttempts).values({ sessionId, quizId, score, totalQuestions });
+    const result = await db.insert(quizAttempts).values({ sessionId, quizId, score, totalQuestions, randomizationSeed });
     return result;
   } catch (error) {
     console.error("[Database] Failed to create quiz attempt:", error);

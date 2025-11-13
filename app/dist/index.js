@@ -17,7 +17,7 @@ import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 
 // drizzle/schema.ts
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { bigint, int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
 var users = mysqlTable("users", {
   /**
    * Surrogate primary key. Auto-incremented numeric value managed by the database.
@@ -56,6 +56,7 @@ var quizAttempts = mysqlTable("quizAttempts", {
   score: int("score").notNull(),
   // Number of correct answers
   totalQuestions: int("totalQuestions").notNull(),
+  randomizationSeed: bigint("randomizationSeed", { mode: "number", unsigned: true }).notNull(),
   completedAt: timestamp("completedAt").defaultNow().notNull()
 });
 var userAnswers = mysqlTable("userAnswers", {
@@ -194,11 +195,11 @@ async function getOrCreateUserSession(sessionId) {
     return void 0;
   }
 }
-async function createQuizAttempt(sessionId, quizId, score, totalQuestions) {
+async function createQuizAttempt(sessionId, quizId, score, totalQuestions, randomizationSeed) {
   const db = await getDb();
   if (!db) return void 0;
   try {
-    const result = await db.insert(quizAttempts).values({ sessionId, quizId, score, totalQuestions });
+    const result = await db.insert(quizAttempts).values({ sessionId, quizId, score, totalQuestions, randomizationSeed });
     return result;
   } catch (error) {
     console.error("[Database] Failed to create quiz attempt:", error);
@@ -705,6 +706,13 @@ var systemRouter = router({
 
 // server/routers/quiz.ts
 import { z as z2 } from "zod";
+
+// shared/randomUtils.ts
+function generateRandomSeed() {
+  return Math.floor(Math.random() * 4294967295) >>> 0;
+}
+
+// server/routers/quiz.ts
 var quizRouter = router({
   /**
    * Get all available quizzes
@@ -726,19 +734,22 @@ var quizRouter = router({
     if (!quiz) {
       throw new Error("Quiz not found");
     }
+    const randomizationSeed = generateRandomSeed();
     let quizData;
     try {
       quizData = JSON.parse(quiz.content);
     } catch (error) {
       throw new Error("Invalid quiz data format");
     }
-    return {
+    let qd = {
       id: quiz.id,
       title: quiz.title,
       description: quiz.description,
       questions: quizData.questions,
+      randomizationSeed,
       createdAt: quiz.createdAt
     };
+    return qd;
   }),
   /**
    * Submit a quiz attempt and record answers
@@ -747,6 +758,7 @@ var quizRouter = router({
     z2.object({
       sessionId: z2.string(),
       quizId: z2.number(),
+      randomizationSeed: z2.number(),
       answers: z2.array(
         z2.object({
           questionIndex: z2.number(),
@@ -779,7 +791,8 @@ var quizRouter = router({
       input.sessionId,
       input.quizId,
       score,
-      quizData.questions.length
+      quizData.questions.length,
+      input.randomizationSeed
     );
     if (!attemptResult) {
       throw new Error("Failed to create quiz attempt");
@@ -818,6 +831,7 @@ var quizRouter = router({
     return attempts.map((attempt) => ({
       id: attempt.id,
       quizId: attempt.quizId,
+      randomizationSeed: attempt.randomizationSeed,
       score: attempt.score,
       totalQuestions: attempt.totalQuestions,
       percentage: Math.round(attempt.score / attempt.totalQuestions * 100),
