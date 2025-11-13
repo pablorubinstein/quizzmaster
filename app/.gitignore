@@ -109,3 +109,5 @@ temp/
 
 # index.html
 dist/public/index.html
+drizzle/meta
+drizzle/*.sql
