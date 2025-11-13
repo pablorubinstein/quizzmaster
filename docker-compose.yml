@@ -1,0 +1,28 @@
+services:
+  db:
+    image: mysql:8.0.44-debian
+    container_name: mysql_db
+    build: ./mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysecretpassword # Replace with a strong password for production
+      MYSQL_DATABASE: quizzmaster # Optional: Define a default database
+      MYSQL_USER: app # Optional: Define a default user
+      MYSQL_PASSWORD: quique_pessoa # Optional: Define a password for the default user
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql # Persists data using a named volume
+      - ./mysql_scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pmysecretpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  webapp:
+    build: ./app
+    container_name: webapp
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
