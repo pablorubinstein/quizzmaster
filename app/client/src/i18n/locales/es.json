@@ -13,7 +13,8 @@
     "save": "Guardar",
     "delete": "Eliminar",
     "edit": "Editar",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "morePages": "Más páginas"
   },
   "navigation": {
     "home": "Inicio",
@@ -51,7 +52,11 @@
     "noTimeLimit": "Sin límite de tiempo",
     "loadingQuiz": "Cargando cuestionario...",
     "reviewAnswers": "Revisar Respuestas",
-    "backToHome": "Volver al Inicio"
+    "backToHome": "Volver al Inicio",
+    "quizComplete": "Cuestionario completado!",
+    "goodJob": "¡Buen trabajo! Sigue practicando para mejorar.",
+    "keepTrying": "No te desanimes! Repasa las respuestas equivocadas e intenta de nuevo.",
+    "stats": "Obtuviste {{correctCount}} de {{n_answers}} preguntas correctas."
   },
   "review": {
     "title": "Revisión del Cuestionario",

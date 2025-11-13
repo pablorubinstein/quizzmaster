@@ -13,7 +13,8 @@
     "save": "Enregistrer",
     "delete": "Supprimer",
     "edit": "Modifier",
-    "close": "Fermer"
+    "close": "Fermer",
+    "morePages": "Plus de pages"
   },
   "navigation": {
     "home": "Accueil",
@@ -51,7 +52,11 @@
     "noTimeLimit": "Pas de limite de temps",
     "loadingQuiz": "Chargement du quiz...",
     "reviewAnswers": "Examiner les réponses",
-    "backToHome": "Retour à l'Accueil"
+    "backToHome": "Retour à l'Accueil",
+    "quizComplete": "Quiz completé!",
+    "goodJob": "Bon travail ! Continuez à vous entraîner pour vous améliorer.",
+    "keepTrying" : "Continuez d'essayer ! Revoyez les questions auxquelles vous avez mal répondu et réessayez.",
+    "stats": "Vous avez obtenu {{correctCount}} bonnes réponses sur {{n_answers}} questions."
   },
   "review": {
     "title": "Révision du Quiz",

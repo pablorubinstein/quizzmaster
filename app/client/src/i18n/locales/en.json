@@ -13,7 +13,8 @@
     "save": "Save",
     "delete": "Delete",
     "edit": "Edit",
-    "close": "Close"
+    "close": "Close",
+    "morePages": "More Pages"
   },
   "navigation": {
     "home": "Home",
@@ -50,7 +51,12 @@
     "noTimeLimit": "No time limit",
     "loadingQuiz": "Loading quiz...",
     "reviewAnswers": "Review Answers",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "quizComplete": "Quiz complete!",
+    "goodJob": "Good job! Keep practicing to improve.",
+    "keepTrying": "Keep trying! Review the missed questions and try again.",
+    "stats": "You got {{correctCount}} out of {{n_answers}} questions correct."
+
   },
   "review": {
     "title": "Quiz Review",
