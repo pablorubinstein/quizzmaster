@@ -5,10 +5,10 @@ services:
     build: ./mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: mysecretpassword # Replace with a strong password for production
-      MYSQL_DATABASE: quizzmaster # Optional: Define a default database
-      MYSQL_USER: app # Optional: Define a default user
-      MYSQL_PASSWORD: quique_pessoa # Optional: Define a password for the default user
+      MYSQL_ROOT_PASSWORD: xxxx # Replace with a strong password for production
+      MYSQL_DATABASE: xxxx # Optional: Define a default database
+      MYSQL_USER: xxxx # Optional: Define a default user
+      MYSQL_PASSWORD: xxxxxx # Optional: Define a password for the default user
     ports:
       - "3306:3306"
     volumes:
