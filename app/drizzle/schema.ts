@@ -1,4 +1,5 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { bigint, int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+// import { int32 } from "zod";
 
 /**
  * Core user table backing auth flow.
@@ -63,6 +64,7 @@ export const quizAttempts = mysqlTable("quizAttempts", {
   quizId: int("quizId").notNull(),
   score: int("score").notNull(), // Number of correct answers
   totalQuestions: int("totalQuestions").notNull(),
+  randomizationSeed: bigint("randomizationSeed", { mode: 'number', unsigned: true}).notNull(),
   completedAt: timestamp("completedAt").defaultNow().notNull(),
 });
 
