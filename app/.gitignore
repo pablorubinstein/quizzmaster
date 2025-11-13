@@ -106,3 +106,6 @@ temp/
 *.db
 *.sqlite
 *.sqlite3
+
+# index.html
+dist/public/index.html
