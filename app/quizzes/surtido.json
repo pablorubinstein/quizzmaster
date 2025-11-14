@@ -1,0 +1,156 @@
+{
+ "title": "Surtido",
+ "description": "navegación, meteorología, mareas y reglamentación marítima.",
+   "questions": [
+     {
+       "question": "¿Qué instrumento se utiliza para determinar el rumbo magnético?",
+       "options": ["Barómetro", "Compás", "Anemómetro", "Sextante"],
+       "correctAnswer": "Compás"
+     },
+     {
+       "question": "¿Qué indica la marca de tope de un enfilamiento en una carta náutica?",
+       "options": ["Una boya de peligro aislado", "Una alineación de dos puntos para mantener el rumbo", "Una zona de pesca", "Una corriente"],
+       "correctAnswer": "Una alineación de dos puntos para mantener el rumbo"
+     },
+     {
+       "question": "¿Qué significan las siglas GPS?",
+       "options": ["Global Positioning System", "General Position Signal", "Geographical Projection System", "Ground Path System"],
+       "correctAnswer": "Global Positioning System"
+     },
+     {
+       "question": "¿Qué se entiende por 'deriva' en navegación?",
+       "options": ["El desplazamiento del barco por efecto del viento", "El desvío de la derrota por efecto de la corriente o el viento", "El rumbo verdadero", "El movimiento del timón"],
+       "correctAnswer": "El desvío de la derrota por efecto de la corriente o el viento"
+     },
+     {
+       "question": "¿Qué rumbo se obtiene al corregir el rumbo magnético por declinación?",
+       "options": ["Rumbo verdadero", "Rumbo de aguja", "Rumbo de marcación", "Rumbo de corriente"],
+       "correctAnswer": "Rumbo verdadero"
+     },
+     {
+       "question": "¿Qué color indica estribor en las luces de navegación?",
+       "options": ["Rojo", "Verde", "Blanco", "Amarillo"],
+       "correctAnswer": "Verde"
+     },
+     {
+       "question": "¿Qué representa la rosa de los vientos en una carta náutica?",
+       "options": ["Las corrientes", "Los rumbos y orientaciones magnéticas", "Las alturas de marea", "Las profundidades"],
+       "correctAnswer": "Los rumbos y orientaciones magnéticas"
+     },
+     {
+       "question": "¿Qué instrumento se utiliza para medir la velocidad del viento?",
+       "options": ["Barómetro", "Anemómetro", "Higrómetro", "Ecosonda"],
+       "correctAnswer": "Anemómetro"
+     },
+     {
+       "question": "¿Qué nubes indican la posible llegada de un frente frío?",
+       "options": ["Cúmulos", "Cirros", "Estratos", "Cumulonimbos"],
+       "correctAnswer": "Cumulonimbos"
+     },
+     {
+       "question": "¿Qué mide un barómetro?",
+       "options": ["La humedad", "La presión atmosférica", "La dirección del viento", "La temperatura del aire"],
+       "correctAnswer": "La presión atmosférica"
+     },
+     {
+       "question": "¿Qué viento sopla del sudeste en el Río de la Plata?",
+       "options": ["Pampero", "Sudestada", "Norte", "Zonda"],
+       "correctAnswer": "Sudestada"
+     },
+     {
+       "question": "¿Qué indica una rápida caída de la presión barométrica?",
+       "options": ["Mejoría del tiempo", "Aproximación de un frente frío o tormenta", "Viento en calma", "Cambio de corriente"],
+       "correctAnswer": "Aproximación de un frente frío o tormenta"
+     },
+     {
+       "question": "¿Qué tipo de nubes suelen asociarse con buen tiempo y viento moderado?",
+       "options": ["Cúmulos", "Cumulonimbos", "Estratos", "Nimbostratos"],
+       "correctAnswer": "Cúmulos"
+     },
+     {
+       "question": "¿Qué fenómeno meteorológico provoca aumento del nivel del río en el Río de la Plata?",
+       "options": ["Pampero", "Sudestada", "Frente cálido", "Alta presión"],
+       "correctAnswer": "Sudestada"
+     },
+     {
+       "question": "¿Qué se observa en un anemómetro cuando pasa un frente frío?",
+       "options": ["Disminuye la velocidad del viento", "El viento rota al sudoeste y aumenta su intensidad", "El viento se calma", "El viento gira al norte"],
+       "correctAnswer": "El viento rota al sudoeste y aumenta su intensidad"
+     },
+     {
+       "question": "¿Qué es la amplitud de marea?",
+       "options": ["La diferencia de hora entre pleamar y bajamar", "La diferencia de altura entre pleamar y bajamar", "El tiempo que dura la pleamar", "La corriente superficial"],
+       "correctAnswer": "La diferencia de altura entre pleamar y bajamar"
+     },
+     {
+       "question": "¿Qué es una pleamar?",
+       "options": ["El momento de mayor altura de la marea", "El momento de menor altura de la marea", "El cambio de corriente", "El paso del frente frío"],
+       "correctAnswer": "El momento de mayor altura de la marea"
+     },
+     {
+       "question": "¿Qué son las corrientes de marea?",
+       "options": ["Corrientes producidas por el viento", "Corrientes periódicas debidas al movimiento de las mareas", "Corrientes permanentes de fondo", "Ondas de presión atmosférica"],
+       "correctAnswer": "Corrientes periódicas debidas al movimiento de las mareas"
+     },
+     {
+       "question": "¿Qué factores influyen en la altura de la marea?",
+       "options": ["Fase lunar y presión atmosférica", "Temperatura del agua y viento", "Latitud y longitud", "Salinidad"],
+       "correctAnswer": "Fase lunar y presión atmosférica"
+     },
+     {
+       "question": "¿Cuántas pleamares hay generalmente en un día lunar?",
+       "options": ["Una", "Dos", "Tres", "Cuatro"],
+       "correctAnswer": "Dos"
+     },
+     {
+       "question": "¿Qué ocurre durante las mareas vivas?",
+       "options": ["Las mareas tienen menor amplitud", "Las mareas tienen mayor amplitud", "No hay corrientes", "Las corrientes se invierten"],
+       "correctAnswer": "Las mareas tienen mayor amplitud"
+     },
+     {
+       "question": "¿Qué es la bajamar?",
+       "options": ["El momento de menor altura del nivel del mar", "El cambio de corriente", "El aumento de presión atmosférica", "La corriente de deriva"],
+       "correctAnswer": "El momento de menor altura del nivel del mar"
+     },
+     {
+       "question": "¿Qué indica el RIPA cuando dos veleros se aproximan con riesgo de abordaje y ambos con viento en bandas opuestas?",
+       "options": ["El que recibe el viento por babor debe maniobrar", "El que recibe el viento por estribor debe maniobrar", "Ambos deben virar", "El de mayor tamaño tiene prioridad"],
+       "correctAnswer": "El que recibe el viento por babor debe maniobrar"
+     },
+     {
+       "question": "Según el RIPA, ¿qué significa una luz roja y una luz verde vistas simultáneamente?",
+       "options": ["Se observa la popa de una embarcación", "Se aproxima una embarcación de frente", "Embarcación fondeada", "Embarcación en navegación de vuelta encontrada"],
+       "correctAnswer": "Se aproxima una embarcación de frente"
+     },
+     {
+       "question": "¿Qué indica una boya roja cilíndrica (tipo ‘lateral babor’) en el sistema de balizamiento A?",
+       "options": ["Dejarla por estribor al ingresar al puerto", "Dejarla por babor al ingresar al puerto", "Zona prohibida", "Peligro aislado"],
+       "correctAnswer": "Dejarla por babor al ingresar al puerto"
+     },
+     {
+       "question": "¿Qué documento regula las condiciones para habilitar una embarcación deportiva en Argentina?",
+       "options": ["RIPA", "REGINAVE", "Ley de Navegación Comercial", "Código Civil"],
+       "correctAnswer": "REGINAVE"
+     },
+     {
+       "question": "¿Qué elemento es obligatorio según el REGINAVE para embarcaciones de vela?",
+       "options": ["Extintor de incendios", "Aro salvavidas", "Ancla con cabo y cadena", "Todos los anteriores"],
+       "correctAnswer": "Todos los anteriores"
+     },
+     {
+       "question": "¿Qué indica una señal sonora de cinco pitadas cortas?",
+       "options": ["Maniobra a estribor", "Desacuerdo o peligro", "Inicio de navegación", "Vuelta encontrada"],
+       "correctAnswer": "Desacuerdo o peligro"
+     },
+     {
+       "question": "¿Qué luces debe exhibir un velero navegando de noche?",
+       "options": ["Luz blanca todo horizonte", "Luz roja a babor, verde a estribor y blanca de alcance", "Dos luces blancas verticales", "Solo luz de tope"],
+       "correctAnswer": "Luz roja a babor, verde a estribor y blanca de alcance"
+     },
+     {
+       "question": "¿Cuál es la obligación principal del patrón según el REGINAVE?",
+       "options": ["Usar el chaleco salvavidas", "Garantizar la seguridad de la embarcación y su tripulación", "Llevar la documentación al día", "Conocer los nudos marineros"],
+       "correctAnswer": "Garantizar la seguridad de la embarcación y su tripulación"
+     }
+   ]
+}

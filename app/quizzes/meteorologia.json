@@ -1,0 +1,255 @@
+{
+  "title": "Meteorología",
+  "description": "Preguntas de opción múltiple sobre meteorología aplicada a la navegación",
+  "questions": [
+    {
+      "question": "¿Qué instrumento se utiliza para medir la presión atmosférica?",
+      "options": ["Anemómetro", "Barómetro", "Higrómetro", "Termómetro"],
+      "correctAnswer": "Barómetro"
+    },
+    {
+      "question": "¿Qué indica una caída rápida de la presión atmosférica?",
+      "options": ["Mejora del clima", "Aproximación de mal tiempo", "Aumento de visibilidad", "Disminución del viento"],
+      "correctAnswer": "Aproximación de mal tiempo"
+    },
+    {
+      "question": "¿Qué mide un anemómetro?",
+      "options": ["Dirección del viento", "Velocidad del viento", "Humedad", "Presión"],
+      "correctAnswer": "Velocidad del viento"
+    },
+    {
+      "question": "¿Qué mide una veleta?",
+      "options": ["Velocidad del viento", "Radiación solar", "Dirección del viento", "Altura de ola"],
+      "correctAnswer": "Dirección del viento"
+    },
+    {
+      "question": "¿Qué formación nubosa suele anticipar tormentas eléctricas?",
+      "options": ["Cúmulos humilis", "Nimbostratos", "Cumulonimbos", "Cirros"],
+      "correctAnswer": "Cumulonimbos"
+    },
+    {
+      "question": "¿Qué tipo de nube indica lluvia persistente?",
+      "options": ["Altocúmulos", "Cirros", "Nimbostratos", "Estratos"],
+      "correctAnswer": "Nimbostratos"
+    },
+    {
+      "question": "¿Qué tipo de nube anuncia generalmente buen tiempo?",
+      "options": ["Cumulonimbos", "Nimbostratos", "Cirros", "Estratocúmulos"],
+      "correctAnswer": "Cirros"
+    },
+    {
+      "question": "¿Qué significa un aumento sostenido de la presión atmosférica?",
+      "options": ["Tormenta próxima", "Estabilización del clima", "Frente cálido entrante", "Mayor humedad"],
+      "correctAnswer": "Estabilización del clima"
+    },
+    {
+      "question": "¿Qué indica un barómetro que desciende lentamente?",
+      "options": ["Baja pasajera", "Cambio gradual a mal tiempo", "Mejoría inmediata", "Aumento de temperatura"],
+      "correctAnswer": "Cambio gradual a mal tiempo"
+    },
+    {
+      "question": "¿Qué fenómeno genera diferencias de presión atmosférica?",
+      "options": ["Rotación de la Tierra", "Evaporación", "Viento", "Humedad"],
+      "correctAnswer": "Viento"
+    },
+
+    {
+      "question": "¿Qué es un frente frío?",
+      "options": ["Ingreso de aire cálido", "Ingreso de aire frío desplazando aire cálido", "Zona de alta presión", "Corriente ascendente"],
+      "correctAnswer": "Ingreso de aire frío desplazando aire cálido"
+    },
+    {
+      "question": "¿Qué suele ocurrir al paso de un frente frío?",
+      "options": ["Aumento de visibilidad", "Descenso de temperatura y tormentas", "Viento en calma", "Humedad muy baja"],
+      "correctAnswer": "Descenso de temperatura y tormentas"
+    },
+    {
+      "question": "¿Qué es un frente cálido?",
+      "options": ["Ingreso de aire frío", "Ingreso de aire cálido desplazando aire frío", "Baja presión", "Alta humedad"],
+      "correctAnswer": "Ingreso de aire cálido desplazando aire frío"
+    },
+    {
+      "question": "¿Qué condición trae normalmente un frente cálido?",
+      "options": ["Descenso brusco de temperatura", "Lluvias suaves y persistentes", "Vientos huracanados", "Cielos despejados"],
+      "correctAnswer": "Lluvias suaves y persistentes"
+    },
+    {
+      "question": "¿Qué significa una isobara muy junta en un mapa meteorológico?",
+      "options": ["Viento débil", "Viento fuerte", "Aumento de humedad", "Cielos despejados"],
+      "correctAnswer": "Viento fuerte"
+    },
+
+    {
+      "question": "¿Cómo se denomina la zona de alta presión?",
+      "options": ["Depresión", "Anticiclón", "Frente", "Cizalladura"],
+      "correctAnswer": "Anticiclón"
+    },
+    {
+      "question": "¿Cómo se denomina la zona de baja presión?",
+      "options": ["Dorsal", "Anticiclón", "Borrasca", "Vaguada"],
+      "correctAnswer": "Borrasca"
+    },
+    {
+      "question": "¿Qué fenómenos están asociados a las bajas presiones?",
+      "options": ["Tiempo estable", "Tormentas y viento", "Cielos despejados", "Vientos suaves"],
+      "correctAnswer": "Tormentas y viento"
+    },
+    {
+      "question": "¿Qué fenómenos están asociados a las altas presiones?",
+      "options": ["Cielos despejados y estabilidad", "Tormentas eléctricas", "Ráfagas fuertes", "Lluvias persistentes"],
+      "correctAnswer": "Cielos despejados y estabilidad"
+    },
+    {
+      "question": "¿Qué produce la cizalladura del viento?",
+      "options": ["Cambio de temperatura", "Cambio brusco de velocidad y dirección del viento", "Aumento de humedad", "Estancamiento de aire"],
+      "correctAnswer": "Cambio brusco de velocidad y dirección del viento"
+    },
+
+    {
+      "question": "¿Qué fenómeno genera las brisas costeras?",
+      "options": ["Nubes bajas", "Diferencia de calentamiento entre tierra y mar", "Presencia de tormentas", "Alta humedad"],
+      "correctAnswer": "Diferencia de calentamiento entre tierra y mar"
+    },
+    {
+      "question": "¿Cuándo se produce la brisa marina?",
+      "options": ["De noche", "Durante el mediodía y tarde", "Al amanecer", "Solo con tormentas"],
+      "correctAnswer": "Durante el mediodía y tarde"
+    },
+    {
+      "question": "¿En qué dirección sopla la brisa marina?",
+      "options": ["Del mar hacia la tierra", "De la tierra hacia el mar", "Paralela a la costa", "Verticalmente"],
+      "correctAnswer": "Del mar hacia la tierra"
+    },
+    {
+      "question": "¿Cuándo aparece la brisa de tierra?",
+      "options": ["Al mediodía", "Durante la noche", "Con lluvia", "En días sin viento"],
+      "correctAnswer": "Durante la noche"
+    },
+    {
+      "question": "¿En qué dirección sopla la brisa de tierra?",
+      "options": ["De la tierra hacia el mar", "Del mar hacia la tierra", "De sur a norte", "Solo en tormentas"],
+      "correctAnswer": "De la tierra hacia el mar"
+    },
+
+    {
+      "question": "¿Qué indica un cambio repentino de viento hacia el sur en el Río de la Plata?",
+      "options": ["Mejoría", "Posible temporal", "Mayor visibilidad", "Aumento de temperatura"],
+      "correctAnswer": "Posible temporal"
+    },
+    {
+      "question": "¿Qué viento se asocia normalmente con buen tiempo en la región?",
+      "options": ["Sudestada", "Pampero", "Norte", "Sur"],
+      "correctAnswer": "Norte"
+    },
+    {
+      "question": "¿Qué viento del Río de la Plata suele traer descenso brusco de temperatura?",
+      "options": ["Norte", "Este", "Pampero", "Oeste"],
+      "correctAnswer": "Pampero"
+    },
+    {
+      "question": "¿Qué viento suele generar aumento de marejada en la costa bonaerense?",
+      "options": ["Sur", "Sudeste (sudestada)", "Oeste", "Noroeste"],
+      "correctAnswer": "Sudeste (sudestada)"
+    },
+    {
+      "question": "¿Qué viento suele provocar niebla en el Río de la Plata?",
+      "options": ["Norte húmedo", "Pampero", "Sur seco", "Sudestada"],
+      "correctAnswer": "Norte húmedo"
+    },
+
+    {
+      "question": "¿Qué es la niebla?",
+      "options": ["Lluvia congelada", "Nubes en contacto con el suelo", "Tormenta eléctrica", "Nubes de gran altura"],
+      "correctAnswer": "Nubes en contacto con el suelo"
+    },
+    {
+      "question": "¿Qué causa la niebla de radiación?",
+      "options": ["Aumento brusco del viento", "Enfriamiento nocturno del suelo", "Lluvias intensas", "Frentes fríos"],
+      "correctAnswer": "Enfriamiento nocturno del suelo"
+    },
+    {
+      "question": "¿Qué causa la niebla de advección?",
+      "options": ["Luz solar intensa", "Viento cálido sobre superficie fría", "Viento frío sobre tierra cálida", "Tormenta eléctrica"],
+      "correctAnswer": "Viento cálido sobre superficie fría"
+    },
+    {
+      "question": "¿Qué debe hacer un navegante en niebla densa?",
+      "options": ["Aumentar velocidad", "Reducir velocidad y emitir señales sonoras", "Alejarse de la costa a máxima velocidad", "Arriar todas las velas"],
+      "correctAnswer": "Reducir velocidad y emitir señales sonoras"
+    },
+    {
+      "question": "¿Qué instrumento ayuda a navegar con niebla?",
+      "options": ["Veleta", "Radar", "Anemómetro", "Compás solar"],
+      "correctAnswer": "Radar"
+    },
+
+    {
+      "question": "¿Qué representa una isoterma?",
+      "options": ["Igual presión", "Igual temperatura", "Igual humedad", "Igual velocidad de viento"],
+      "correctAnswer": "Igual temperatura"
+    },
+    {
+      "question": "¿Qué representa una isobara?",
+      "options": ["Igual temperatura", "Igual humedad", "Igual presión", "Igual punto de rocío"],
+      "correctAnswer": "Igual presión"
+    },
+    {
+      "question": "¿Qué representa una isoyeta?",
+      "options": ["Precipitación acumulada", "Presión atmosférica", "Velocidad del viento", "Temperatura"],
+      "correctAnswer": "Precipitación acumulada"
+    },
+    {
+      "question": "El punto de rocío indica:",
+      "options": ["Temperatura de ebullición", "Temperatura a la que condensa el vapor de agua", "Nivel del mar", "Altura de las nubes"],
+      "correctAnswer": "Temperatura a la que condensa el vapor de agua"
+    },
+    {
+      "question": "Si la temperatura se acerca al punto de rocío, ¿qué puede ocurrir?",
+      "options": ["Nieblas o rocío", "Tormentas eléctricas", "Vientos fuertes", "Cielos despejados"],
+      "correctAnswer": "Nieblas o rocío"
+    },
+
+    {
+      "question": "¿Qué fenómeno produce el efecto Coriolis?",
+      "options": ["Giro de la Tierra", "Cambio de temperatura", "Humedad ambiental", "Presión alta"],
+      "correctAnswer": "Giro de la Tierra"
+    },
+    {
+      "question": "En el hemisferio sur, los vientos giran alrededor de una baja presión:",
+      "options": ["En sentido horario", "En sentido antihorario", "De este a oeste únicamente", "Sin patrón definido"],
+      "correctAnswer": "En sentido horario"
+    },
+    {
+      "question": "Un aumento repentino de rachas sin cambio de dirección suele indicar:",
+      "options": ["Tormenta cercana", "Mejoría del clima", "Disminución de presión", "Viento térmico"],
+      "correctAnswer": "Tormenta cercana"
+    },
+    {
+      "question": "¿Qué condición suele anticipar un cielo rojo al amanecer?",
+      "options": ["Buen tiempo", "Empeoramiento del tiempo", "Ningún cambio", "Viento en calma"],
+      "correctAnswer": "Empeoramiento del tiempo"
+    },
+    {
+      "question": "¿Qué fenómeno suele producir una línea de turbonada?",
+      "options": ["Ráfagas muy fuertes y tormentas severas", "Cielos despejados", "Disminución del viento", "Llovizna débil"],
+      "correctAnswer": "Ráfagas muy fuertes y tormentas severas"
+    },
+
+    {
+      "question": "¿Qué información es esencial revisar antes de una salida a navegar?",
+      "options": ["Color del casco", "Pronóstico meteorológico", "Cantidad de velas", "Temperatura del agua"],
+      "correctAnswer": "Pronóstico meteorológico"
+    },
+    {
+      "question": "¿Qué debe hacer un navegante si detecta cumulonimbos desarrollándose rápidamente?",
+      "options": ["Aumentar superficie vélica", "Reducir velas y prepararse para rachas", "Navegar hacia ellos", "Ignorarlos"],
+      "correctAnswer": "Reducir velas y prepararse para rachas"
+    },
+    {
+      "question": "¿Qué indica el amainamiento repentino del viento antes de una tormenta?",
+      "options": ["Mejoría", "Probable reventón o turbonada", "Viento en calma estable", "Disminución de humedad"],
+      "correctAnswer": "Probable reventón o turbonada"
+    }
+  ]
+}
+

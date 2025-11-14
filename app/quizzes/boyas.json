@@ -1,0 +1,226 @@
+ {
+        "title": "Boyas y Señales Marítimas",
+        "description": "Preguntas sobre características, colores, formas y luces de las boyas según el Sistema IALA Región A.",
+        "questions": [
+          {
+            "question": "¿Qué sistema de balizamiento utiliza Argentina?",
+            "options": ["IALA Región A", "IALA Región B", "Sistema Internacional OMI", "Ninguno"],
+            "correctAnswer": "IALA Región A"
+          },
+          {
+            "question": "En el sistema IALA Región A, ¿de qué color son las boyas de babor?",
+            "options": ["Rojas", "Verdes", "Amarillas", "Negras"],
+            "correctAnswer": "Rojas"
+          },
+          {
+            "question": "¿De qué forma son las boyas laterales de babor?",
+            "options": ["Cilíndrica (tipo lata)", "Cónica", "Esférica", "En cruz"],
+            "correctAnswer": "Cilíndrica (tipo lata)"
+          },
+          {
+            "question": "¿De qué color son las boyas laterales de estribor en la Región A?",
+            "options": ["Rojas", "Verdes", "Negras", "Amarillas"],
+            "correctAnswer": "Verdes"
+          },
+          {
+            "question": "¿Qué forma tiene la boya lateral de estribor?",
+            "options": ["Cilíndrica", "Cónica", "Esférica", "De castillete"],
+            "correctAnswer": "Cónica"
+          },
+          {
+            "question": "Al ingresar a un puerto, ¿por qué banda deben dejarse las boyas rojas en el sistema IALA A?",
+            "options": ["Babor", "Estribor", "Indistinto", "Depende del viento"],
+            "correctAnswer": "Babor"
+          },
+          {
+            "question": "¿Qué color y forma tiene una boya de peligro aislado?",
+            "options": ["Negra con una o dos franjas rojas, esférica", "Roja con franja verde, cónica", "Amarilla, cilíndrica", "Verde con franja blanca, castillete"],
+            "correctAnswer": "Negra con una o dos franjas rojas, esférica"
+          },
+          {
+            "question": "¿Qué tope tiene una boya de peligro aislado?",
+            "options": ["Dos esferas negras verticales", "Dos conos negros base con base", "Dos conos negros vértice con vértice", "Una cruz amarilla"],
+            "correctAnswer": "Dos esferas negras verticales"
+          },
+          {
+            "question": "¿Qué característica tiene la luz de una boya de peligro aislado?",
+            "options": ["Dos destellos blancos", "Destellos rojos rápidos", "Luz fija verde", "Destellos amarillos continuos"],
+            "correctAnswer": "Dos destellos blancos"
+          },
+          {
+            "question": "¿Qué indica una boya de aguas seguras?",
+            "options": ["Canal principal", "Peligro aislado", "Fondo rocoso", "Zona de fondeo"],
+            "correctAnswer": "Canal principal"
+          },
+          {
+            "question": "¿De qué color es una boya de aguas seguras?",
+            "options": ["Roja y blanca vertical", "Negra y roja horizontal", "Amarilla", "Verde"],
+            "correctAnswer": "Roja y blanca vertical"
+          },
+          {
+            "question": "¿Qué tope tiene una boya de aguas seguras?",
+            "options": ["Una esfera roja", "Dos conos negros vértice con vértice", "Una cruz amarilla", "Una esfera negra"],
+            "correctAnswer": "Una esfera roja"
+          },
+          {
+            "question": "¿Qué luz exhibe una boya de aguas seguras?",
+            "options": ["Luz blanca isofase o Morse 'A'", "Luz roja fija", "Luz amarilla centelleante", "Dos destellos verdes"],
+            "correctAnswer": "Luz blanca isofase o Morse 'A'"
+          },
+          {
+            "question": "¿Qué indica una boya de peligro especial o zona especial?",
+            "options": ["Área de recreo, cables submarinos u obras", "Canal principal", "Peligro aislado", "Puerto deportivo"],
+            "correctAnswer": "Área de recreo, cables submarinos u obras"
+          },
+        {
+          "question": "¿Qué color identifica a las boyas de babor en el sistema IALA Región A?",
+          "options": ["Rojo", "Verde", "Amarillo", "Negro"],
+          "correctAnswer": "Rojo"
+        },
+        {
+          "question": "¿Qué color identifica a las boyas de estribor en el sistema IALA Región A?",
+          "options": ["Verde", "Rojo", "Amarillo", "Blanco"],
+          "correctAnswer": "Verde"
+        },
+        {
+          "question": "¿Qué forma tiene una boya lateral de babor?",
+          "options": ["Cónica", "Cilíndrica (castillete)", "Esférica", "Piramidal"],
+          "correctAnswer": "Cilíndrica (castillete)"
+        },
+        {
+          "question": "¿Qué forma tiene una boya lateral de estribor?",
+          "options": ["Cónica", "Cilíndrica", "Esférica", "Bastón"],
+          "correctAnswer": "Cónica"
+        },
+        {
+          "question": "¿Qué significa una boya con bandas rojas y verdes verticales?",
+          "options": ["Canal preferido", "Peligro aislado", "Aguas seguras", "Zona de anclaje"],
+          "correctAnswer": "Canal preferido"
+        },
+        {
+          "question": "Si la boya tiene bandas rojas y verdes y la franja superior es roja, ¿por qué lado debe dejarse?",
+          "options": ["Por babor", "Por estribor", "Por el centro del canal", "Depende del viento"],
+          "correctAnswer": "Por babor"
+        },
+        {
+          "question": "¿Qué indica una boya de peligro aislado?",
+          "options": ["Un obstáculo rodeado de aguas navegables", "El límite del canal", "Zona de fondeo", "Aguas seguras"],
+          "correctAnswer": "Un obstáculo rodeado de aguas navegables"
+        },
+        {
+          "question": "¿Qué color y marca superior tiene una boya de peligro aislado?",
+          "options": ["Negra con una o dos bandas rojas y dos bolas negras", "Roja con una cruz", "Amarilla con dos conos opuestos", "Blanca con banda azul"],
+          "correctAnswer": "Negra con una o dos bandas rojas y dos bolas negras"
+        },
+        {
+          "question": "¿Qué indica una boya de aguas seguras?",
+          "options": ["Zona libre de peligros y navegable en todos los sentidos", "Entrada a puerto", "Zona de fondeo", "Canal preferido a babor"],
+          "correctAnswer": "Zona libre de peligros y navegable en todos los sentidos"
+        },
+        {
+          "question": "¿De qué color es una boya de aguas seguras?",
+          "options": ["Roja y blanca a franjas verticales", "Negra y amarilla", "Amarilla", "Verde y blanca"],
+          "correctAnswer": "Roja y blanca a franjas verticales"
+        },
+        {
+          "question": "¿Qué característica luminosa tiene una boya de aguas seguras?",
+          "options": ["Destellos blancos cada 10 segundos", "Luz blanca isofásica o Morse A", "Luz roja fija", "Luz amarilla intermitente"],
+          "correctAnswer": "Luz blanca isofásica o Morse A"
+        },
+        {
+          "question": "¿Qué indica una boya amarilla?",
+          "options": ["Zona especial o de uso restringido", "Canal lateral de estribor", "Peligro aislado", "Aguas seguras"],
+          "correctAnswer": "Zona especial o de uso restringido"
+        },
+        {
+          "question": "¿Qué marca superior tiene una boya especial?",
+          "options": ["Una X amarilla", "Dos conos negros", "Dos bolas rojas", "Una cruz blanca"],
+          "correctAnswer": "Una X amarilla"
+        },
+        {
+          "question": "¿Qué indica una boya cardinal norte?",
+          "options": ["Aguas seguras al norte de la boya", "Aguas seguras al sur", "Aguas seguras al este", "Aguas seguras al oeste"],
+          "correctAnswer": "Aguas seguras al norte de la boya"
+        },
+        {
+          "question": "¿Qué colores tiene una boya cardinal norte?",
+          "options": ["Negro arriba y amarillo abajo", "Amarillo arriba y negro abajo", "Negro con banda roja", "Amarillo con cruz negra"],
+          "correctAnswer": "Negro arriba y amarillo abajo"
+        },
+        {
+          "question": "¿Qué característica luminosa tiene una boya cardinal norte?",
+          "options": ["Luz blanca continua", "Destellos continuos rápidos o muy rápidos", "Dos destellos blancos", "Cuatro destellos blancos"],
+          "correctAnswer": "Destellos continuos rápidos o muy rápidos"
+        },
+        {
+          "question": "¿Qué indica una boya cardinal sur?",
+          "options": ["Aguas seguras al sur de la boya", "Peligro al sur", "Canal preferido al sur", "Zona especial"],
+          "correctAnswer": "Aguas seguras al sur de la boya"
+        },
+        {
+          "question": "¿Qué colores tiene una boya cardinal sur?",
+          "options": ["Amarillo arriba y negro abajo", "Negro arriba y amarillo abajo", "Negro con banda roja", "Rojo con banda verde"],
+          "correctAnswer": "Amarillo arriba y negro abajo"
+        },
+        {
+          "question": "¿Qué característica luminosa tiene una boya cardinal sur?",
+          "options": ["Seis destellos rápidos seguidos de uno largo", "Dos destellos blancos", "Cuatro destellos blancos", "Luz roja intermitente"],
+          "correctAnswer": "Seis destellos rápidos seguidos de uno largo"
+        },
+        {
+          "question": "¿Qué indica una boya cardinal este?",
+          "options": ["Aguas seguras al este de la boya", "Canal preferido al este", "Zona especial", "Aguas restringidas"],
+          "correctAnswer": "Aguas seguras al este de la boya"
+        },
+        {
+          "question": "¿Qué colores tiene una boya cardinal este?",
+          "options": ["Negro - amarillo - negro", "Amarillo - negro - amarillo", "Rojo - blanco - rojo", "Negro con cruz amarilla"],
+          "correctAnswer": "Negro - amarillo - negro"
+        },
+        {
+          "question": "¿Qué característica luminosa tiene una boya cardinal este?",
+          "options": ["Tres destellos blancos", "Dos destellos blancos", "Cuatro destellos blancos", "Luz continua blanca"],
+          "correctAnswer": "Tres destellos blancos"
+        },
+        {
+          "question": "¿Qué indica una boya cardinal oeste?",
+          "options": ["Aguas seguras al oeste de la boya", "Zona de fondeo", "Canal lateral", "Peligro aislado"],
+          "correctAnswer": "Aguas seguras al oeste de la boya"
+        },
+        {
+          "question": "¿Qué colores tiene una boya cardinal oeste?",
+          "options": ["Amarillo - negro - amarillo", "Negro - amarillo - negro", "Rojo - blanco - rojo", "Amarillo con cruz negra"],
+          "correctAnswer": "Amarillo - negro - amarillo"
+        },
+        {
+          "question": "¿Qué característica luminosa tiene una boya cardinal oeste?",
+          "options": ["Nueve destellos blancos", "Dos destellos blancos", "Cuatro destellos blancos", "Luz fija blanca"],
+          "correctAnswer": "Nueve destellos blancos"
+        },
+        {
+          "question": "¿Qué tipo de boya marca la entrada principal a un puerto?",
+          "options": ["Boya de aguas seguras", "Boya cardinal norte", "Boya especial", "Boya de peligro aislado"],
+          "correctAnswer": "Boya de aguas seguras"
+        },
+        {
+          "question": "¿Qué significa la abreviatura 'Fl' en la descripción de una luz?",
+          "options": ["Flash (destello)", "Fixed light (luz fija)", "Flicker (parpadeo rápido)", "Floating light (luz flotante)"],
+          "correctAnswer": "Flash (destello)"
+        },
+        {
+          "question": "¿Qué significa 'Oc' en la descripción de una luz?",
+          "options": ["Ocultación (más tiempo encendida que apagada)", "Oscilación", "Ocasional", "Oblicua"],
+          "correctAnswer": "Ocultación (más tiempo encendida que apagada)"
+        },
+        {
+          "question": "¿Qué significa 'Iso' en la descripción de una luz?",
+          "options": ["Isofásica (tiempos iguales de luz y oscuridad)", "Isolada (peligro aislado)", "Isométrica", "Intermitente"],
+          "correctAnswer": "Isofásica (tiempos iguales de luz y oscuridad)"
+        },
+        {
+          "question": "¿Qué indica una boya con luz amarilla intermitente simple?",
+          "options": ["Zona especial", "Aguas seguras", "Peligro aislado", "Canal preferido"],
+          "correctAnswer": "Zona especial"
+        }
+      ]
+    }

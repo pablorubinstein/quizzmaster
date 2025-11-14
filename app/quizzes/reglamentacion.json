@@ -1,0 +1,157 @@
+{
+    "title": "Reglamentación - RIPA",
+    "description": "Preguntas teóricas y prácticas sobre el RIPA. Incluye situaciones de prioridad de paso, luces, marcas y señales sonoras.",
+      "questions": [
+        {
+          "question": "¿Cuál es el objetivo principal del RIPA?",
+          "options": ["Evitar los abordajes en la mar", "Regular la construcción de embarcaciones", "Determinar los derechos de pesca", "Establecer normas de registro"],
+          "correctAnswer": "Evitar los abordajes en la mar"
+        },
+        {
+          "question": "¿A qué embarcaciones se aplica el RIPA?",
+          "options": ["Solo a buques mercantes", "A todas las embarcaciones en alta mar y aguas navegables conectadas al mar", "Solo a embarcaciones de bandera internacional", "A embarcaciones mayores de 12 metros"],
+          "correctAnswer": "A todas las embarcaciones en alta mar y aguas navegables conectadas al mar"
+        },
+     {
+       "question": "Cuando dos embarcaciones a vela se aproximan con riesgo de abordaje y tienen el viento en bandas opuestas, ¿quién debe maniobrar?",
+       "options": ["La que recibe el viento por babor", "La que recibe el viento por estribor", "La más grande", "Ambas deben cambiar rumbo"],
+       "correctAnswer": "La que recibe el viento por babor"
+     },
+     {
+       "question": "Si dos veleros tienen el viento por la misma banda, ¿quién debe maniobrar?",
+       "options": ["El que se encuentra a barlovento", "El que se encuentra a sotavento", "Ambos deben virar", "El de menor tamaño"],
+       "correctAnswer": "El que se encuentra a barlovento"
+     },
+     {
+       "question": "Cuando un velero y una embarcación a motor se aproximan con riesgo de abordaje, ¿quién debe maniobrar?",
+       "options": ["El velero", "La embarcación a motor", "El que navega por babor", "Ambos deben detenerse"],
+       "correctAnswer": "La embarcación a motor"
+     },
+     {
+       "question": "Si dos embarcaciones a motor se aproximan de frente, ¿qué deben hacer?",
+       "options": ["Ambas deben caer a estribor", "Ambas deben caer a babor", "La de menor tamaño maniobra", "Una debe detenerse"],
+       "correctAnswer": "Ambas deben caer a estribor"
+     },
+     {
+       "question": "Si una embarcación alcanza a otra por la popa, ¿quién tiene la obligación de maniobrar?",
+       "options": ["La embarcación alcanzada", "La embarcación que alcanza", "Ambas", "Depende del tipo de embarcación"],
+       "correctAnswer": "La embarcación que alcanza"
+     },
+     {
+       "question": "¿Qué se considera 'riesgo de abordaje' según el RIPA?",
+       "options": ["Cuando la demora entre ambas embarcaciones permanece constante", "Cuando las embarcaciones se alejan", "Cuando las luces cambian de color", "Cuando se pierde visibilidad del otro buque"],
+       "correctAnswer": "Cuando la demora entre ambas embarcaciones permanece constante"
+     },
+     {
+       "question": "¿Qué luces debe exhibir una embarcación a motor en navegación durante la noche?",
+       "options": ["Luz blanca de tope, luces laterales y luz de alcance", "Luz roja y verde solamente", "Luz blanca todo horizonte", "Dos luces rojas"],
+       "correctAnswer": "Luz blanca de tope, luces laterales y luz de alcance"
+     },
+     {
+       "question": "¿Qué luces debe mostrar una embarcación fondeada?",
+       "options": ["Luz blanca todo horizonte", "Luz roja y verde", "Dos luces rojas verticales", "Ninguna"],
+       "correctAnswer": "Luz blanca todo horizonte"
+     },
+     {
+       "question": "¿Qué luces muestra una embarcación sin gobierno?",
+       "options": ["Dos luces rojas verticales", "Una luz blanca", "Dos luces verdes verticales", "Luz amarilla intermitente"],
+       "correctAnswer": "Dos luces rojas verticales"
+     },
+     {
+       "question": "¿Qué luces debe mostrar un remolcador cuando remolca una embarcación larga?",
+       "options": ["Dos luces blancas de tope en línea vertical", "Tres luces blancas de tope en línea vertical", "Una luz blanca de tope y luz amarilla de alcance", "Dos luces verdes"],
+       "correctAnswer": "Tres luces blancas de tope en línea vertical"
+     },
+     {
+       "question": "¿Qué indica una embarcación con dos luces rojas verticales y sin movimiento aparente?",
+       "options": ["Sin gobierno", "Anclada", "En maniobra restringida", "En pesca"],
+       "correctAnswer": "Sin gobierno"
+     },
+     {
+       "question": "¿Qué marca diurna muestra una embarcación fondeada?",
+       "options": ["Una bola negra", "Dos bolas negras", "Dos conos", "Un cilindro"],
+       "correctAnswer": "Una bola negra"
+     },
+     {
+       "question": "¿Qué marca diurna muestra una embarcación sin gobierno?",
+       "options": ["Dos bolas negras verticales", "Una bola negra", "Un cono con vértices opuestos", "Dos conos negros"],
+       "correctAnswer": "Dos bolas negras verticales"
+     },
+     {
+       "question": "¿Qué marca diurna muestra una embarcación restringida en su maniobra?",
+       "options": ["Bola - rombo - bola", "Dos bolas", "Dos conos", "Cruz amarilla"],
+       "correctAnswer": "Bola - rombo - bola"
+     },
+     {
+       "question": "¿Qué marca diurna debe mostrar un velero navegando también a motor?",
+       "options": ["Un cono con el vértice hacia abajo", "Una bola negra", "Dos conos", "Una cruz blanca"],
+       "correctAnswer": "Un cono con el vértice hacia abajo"
+     },
+     {
+       "question": "¿Qué significa una señal sonora de una pitada corta?",
+       "options": ["Caigo a estribor", "Caigo a babor", "Voy hacia atrás", "Me detengo"],
+       "correctAnswer": "Caigo a estribor"
+     },
+     {
+       "question": "¿Qué significa una señal sonora de dos pitadas cortas?",
+       "options": ["Caigo a babor", "Caigo a estribor", "Voy hacia atrás", "No entiendo la maniobra"],
+       "correctAnswer": "Caigo a babor"
+     },
+     {
+       "question": "¿Qué significa una señal sonora de tres pitadas cortas?",
+       "options": ["Pongo máquina atrás", "Caigo a estribor", "Navego a motor", "Riesgo de abordaje"],
+       "correctAnswer": "Pongo máquina atrás"
+     },
+     {
+       "question": "¿Qué significa una señal sonora de cinco pitadas cortas?",
+       "options": ["Desacuerdo o peligro", "Virada por avante", "Atraque", "Cambio de rumbo"],
+       "correctAnswer": "Desacuerdo o peligro"
+     },
+     {
+       "question": "En condiciones de niebla, ¿qué señal debe emitir una embarcación a motor en marcha?",
+       "options": ["Una pitada larga cada 2 minutos", "Dos pitadas largas cada 2 minutos", "Una pitada corta cada minuto", "Tres pitadas cortas cada minuto"],
+       "correctAnswer": "Una pitada larga cada 2 minutos"
+     },
+     {
+       "question": "¿Qué señal sonora debe emitir una embarcación fondeada en niebla?",
+       "options": ["Tocar la campana rápidamente durante 5 segundos cada minuto", "Tres pitadas cortas", "Una pitada larga", "Ninguna"],
+       "correctAnswer": "Tocar la campana rápidamente durante 5 segundos cada minuto"
+     },
+     {
+       "question": "¿Qué significa una embarcación que muestra una luz amarilla intermitente sobre la luz blanca de alcance?",
+       "options": ["Remolcando", "Remolcada", "Pesca con red", "A la deriva"],
+       "correctAnswer": "Remolcada"
+     },
+     {
+       "question": "¿Qué acción debe tomar una embarcación que tiene prioridad de paso según el RIPA?",
+       "options": ["Mantener su rumbo y velocidad", "Aumentar velocidad", "Detenerse", "Maniobrar primero"],
+       "correctAnswer": "Mantener su rumbo y velocidad"
+     },
+     {
+       "question": "¿Qué indica una embarcación que muestra una luz roja sobre una blanca?",
+       "options": ["Pesca con red", "Remolcando", "Sin gobierno", "Anclada"],
+       "correctAnswer": "Pesca con red"
+     },
+     {
+       "question": "¿Qué debe hacer un buque que se aproxima por el través de estribor?",
+       "options": ["Dar paso", "Mantener rumbo", "Aumentar velocidad", "Emitir dos pitadas"],
+       "correctAnswer": "Dar paso"
+     },
+     {
+       "question": "¿Cuál es la obligación de una embarcación que maniobra para evitar un abordaje?",
+       "options": ["Realizar una maniobra clara, amplia y a tiempo", "Aumentar la velocidad", "Reducir el ángulo de demora", "Mantener su rumbo"],
+       "correctAnswer": "Realizar una maniobra clara, amplia y a tiempo"
+     },
+     {
+       "question": "¿Qué indica una embarcación con una luz roja, una blanca y otra verde en línea vertical?",
+       "options": ["Pesca de arrastre", "Remolcando", "Sin gobierno", "Buceo"],
+       "correctAnswer": "Pesca de arrastre"
+     },
+     {
+       "question": "¿Qué señal diurna indica que hay buzos trabajando en el agua?",
+       "options": ["Bandera Alfa (blanca y azul)", "Dos bolas negras", "Una cruz amarilla", "Un cono invertido"],
+       "correctAnswer": "Bandera Alfa (blanca y azul)"
+     }
+   ]
+}
+  

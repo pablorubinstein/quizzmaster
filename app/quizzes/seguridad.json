@@ -1,0 +1,317 @@
+{
+  "title": "Seguridad Náutica",
+  "description": "Preguntas de opción múltiple sobre seguridad en la navegación a vela",
+  "questions": [
+    {
+      "question": "¿Qué elemento de seguridad personal debe usarse siempre en cubierta?",
+      "options": ["Arnés de vela", "Chaleco salvavidas homologado", "Linterna", "Bengala"],
+      "correctAnswer": "Chaleco salvavidas homologado"
+    },
+    {
+      "question": "¿Qué característica debe tener un chaleco salvavidas para navegación costera?",
+      "options": ["Ser inflable únicamente", "Tener silbato y material reflectivo", "Ser color oscuro", "Tener bolsillo interno"],
+      "correctAnswer": "Tener silbato y material reflectivo"
+    },
+    {
+      "question": "¿Qué bengala se utiliza para pedir ayuda durante el día?",
+      "options": ["Cohete con paracaídas", "Bengala fumígena naranja", "Luz estroboscópica", "Bengala de mano roja"],
+      "correctAnswer": "Bengala fumígena naranja"
+    },
+    {
+      "question": "¿Cada cuánto se deben revisar las fechas de vencimiento de bengalas?",
+      "options": ["Cada 6 meses", "Cada 12 meses", "Cada 2 años", "Solo antes de un viaje largo"],
+      "correctAnswer": "Cada 12 meses"
+    },
+    {
+      "question": "¿Cuál es la función del cabo de vida?",
+      "options": ["Reemplazar el timón", "Evitar caídas al agua", "Asegurar las velas", "Fijar el ancla"],
+      "correctAnswer": "Evitar caídas al agua"
+    },
+    {
+      "question": "¿Qué elemento es obligatorio para señalización nocturna en una embarcación a vela pequeña?",
+      "options": ["Reflectores", "Linterna estanca", "Bocina eléctrica", "Radiobaliza"],
+      "correctAnswer": "Linterna estanca"
+    },
+    {
+      "question": "¿Qué debe incluir el botiquín básico?",
+      "options": ["Suero intravenoso", "Antiséptico y gasas", "Medicación controlada", "Suturas"],
+      "correctAnswer": "Antiséptico y gasas"
+    },
+    {
+      "question": "¿Dónde deben guardarse los matafuegos?",
+      "options": ["En el tambucho", "En lugares visibles y accesibles", "En la sentina", "Atados al mástil"],
+      "correctAnswer": "En lugares visibles y accesibles"
+    },
+    {
+      "question": "¿Qué indica un matafuego con manómetro en zona roja?",
+      "options": ["Está cargado", "Necesita recarga o reemplazo", "Está frío", "Tiene exceso de presión"],
+      "correctAnswer": "Necesita recarga o reemplazo"
+    },
+    {
+      "question": "¿Qué tipo de radio es recomendable para navegación deportiva costera?",
+      "options": ["Radio AM", "Radio VHF marina", "Radio doméstica", "Radio satelital obligatoria"],
+      "correctAnswer": "Radio VHF marina"
+    },
+
+    {
+      "question": "¿Cuál es la causa más común de incendio a bordo?",
+      "options": ["Rayos", "Falla eléctrica", "Colisión", "Gas envasado"],
+      "correctAnswer": "Falla eléctrica"
+    },
+    {
+      "question": "¿Qué debe hacerse primero ante un principio de incendio?",
+      "options": ["Cerrar ventilación", "Avisar a la tripulación", "Alejar combustibles", "Ignorar si es pequeño"],
+      "correctAnswer": "Avisar a la tripulación"
+    },
+    {
+      "question": "¿Qué tipo de matafuego se recomienda para fuegos eléctricos?",
+      "options": ["Agua", "Polvo químico", "Arena", "Espuma"],
+      "correctAnswer": "Polvo químico"
+    },
+    {
+      "question": "¿Qué medida previene incendios en el motor?",
+      "options": ["Dejar el compartimiento abierto", "Revisar conexiones eléctricas", "Aumentar el combustible", "Lavar con agua"],
+      "correctAnswer": "Revisar conexiones eléctricas"
+    },
+    {
+      "question": "¿Qué debe hacerse antes de encender un motor fuera de borda?",
+      "options": ["Abrir la ventilación", "Cerrar el tanque", "Apagar la radio", "Desconectar la batería"],
+      "correctAnswer": "Abrir la ventilación"
+    },
+
+    {
+      "question": "¿Qué canal se utiliza para emergencias en VHF?",
+      "options": ["10", "12", "16", "72"],
+      "correctAnswer": "16"
+    },
+    {
+      "question": "La llamada MAYDAY indica:",
+      "options": ["Urgencia", "Socorro", "Aviso rutinario", "Reporte de clima"],
+      "correctAnswer": "Socorro"
+    },
+    {
+      "question": "La llamada PAN-PAN indica:",
+      "options": ["Socorro", "Urgencia", "Encendido de motor", "Aviso meteorológico"],
+      "correctAnswer": "Urgencia"
+    },
+    {
+      "question": "¿Qué información NO es obligatoria en un MAYDAY?",
+      "options": ["Posición", "Tipo de emergencia", "Color del barco", "Número de personas a bordo"],
+      "correctAnswer": "Color del barco"
+    },
+    {
+      "question": "Si la radio falla, ¿qué medio alternativo puede usarse para pedir ayuda?",
+      "options": ["Señales pirotécnicas", "Arriar velas", "Apagar motor", "Usar bocina"],
+      "correctAnswer": "Señales pirotécnicas"
+    },
+
+    {
+      "question": "¿Cuál es el principal riesgo de caer al agua en aguas frías?",
+      "options": ["Deshidratación", "Hipotermia", "Insolación", "Fatiga muscular"],
+      "correctAnswer": "Hipotermia"
+    },
+    {
+      "question": "¿Qué maniobra se utiliza para recuperar a un tripulante caído al agua?",
+      "options": ["Ciaboga", "Hombre al agua", "Orzar", "Aparejar foque"],
+      "correctAnswer": "Hombre al agua"
+    },
+    {
+      "question": "¿Qué debe hacerse inmediatamente al gritar 'Hombre al agua'?",
+      "options": ["Apagar el motor", "Soltar la escota de mayor", "Señalar con el dedo", "Largar el fondeo"],
+      "correctAnswer": "Señalar con el dedo"
+    },
+    {
+      "question": "¿Qué dispositivo ayuda a flotar a un náufrago?",
+      "options": ["Cabo de vida", "Aro salvavidas", "Winche", "Botalón"],
+      "correctAnswer": "Aro salvavidas"
+    },
+    {
+      "question": "¿Qué se debe evitar al rescatar a alguien con hipotermia?",
+      "options": ["Moverlo bruscamente", "Darle abrigo", "Retirarlo del agua", "Contactar ayuda"],
+      "correctAnswer": "Moverlo bruscamente"
+    },
+
+    {
+      "question": "¿Qué riesgo implica una sentina con agua y combustible?",
+      "options": ["Oxidación", "Falta de visibilidad", "Explosión", "Mayor velocidad"],
+      "correctAnswer": "Explosión"
+    },
+    {
+      "question": "¿Qué olor indica posible fuga de gas?",
+      "options": ["Marino", "Azufre", "Nafta", "Gasolina"],
+      "correctAnswer": "Azufre"
+    },
+    {
+      "question": "¿Qué hacer ante una fuga de gas a bordo?",
+      "options": ["Encender luces", "Cerrar la llave de paso", "Arrancar motor", "Ventilar hacia proa"],
+      "correctAnswer": "Cerrar la llave de paso"
+    },
+    {
+      "question": "¿Qué aumenta el riesgo de incendio en cocina?",
+      "options": ["Fuegos a gas", "Ropa suelta", "Viento a favor", "Plancha de inox"],
+      "correctAnswer": "Ropa suelta"
+    },
+    {
+      "question": "¿Cuál es una medida preventiva general?",
+      "options": ["Guardar todo con candados", "Orden y limpieza a bordo", "Apagar instrumentos", "Mantener velas secas"],
+      "correctAnswer": "Orden y limpieza a bordo"
+    },
+
+    {
+      "question": "¿Qué riesgo implica navegar con mal tiempo?",
+      "options": ["Mayor velocidad", "Hombre al agua", "Menos resistencia del casco", "Falta de viento"],
+      "correctAnswer": "Hombre al agua"
+    },
+    {
+      "question": "¿Qué debe revisarse antes de salir a navegar?",
+      "options": ["Color de la vela", "Pronóstico meteorológico", "Estado de la bocina", "Número de remos"],
+      "correctAnswer": "Pronóstico meteorológico"
+    },
+    {
+      "question": "¿Qué significa un aviso de viento fuerte?",
+      "options": ["Vientos > 20 nudos", "Vientos > 15 nudos", "Vientos > 30 nudos", "Vientos > 50 nudos"],
+      "correctAnswer": "Vientos > 30 nudos"
+    },
+    {
+      "question": "¿Qué es una racha?",
+      "options": ["Cambio de marea", "Aumento repentino del viento", "Variación de ola", "Corriente inesperada"],
+      "correctAnswer": "Aumento repentino del viento"
+    },
+    {
+      "question": "¿Qué medida reduce riesgos en tormentas eléctricas?",
+      "options": ["Soltar el timón", "Evitar tocar partes metálicas", "Izar velas", "Apagar luces de navegación"],
+      "correctAnswer": "Evitar tocar partes metálicas"
+    },
+
+    {
+      "question": "¿Qué debe evitarse al fondear?",
+      "options": ["Dar cadena suficiente", "Elegir fondo adecuado", "Fondear sobre cables", "Revisar tenida"],
+      "correctAnswer": "Fondear sobre cables"
+    },
+    {
+      "question": "¿Qué indica un ancla que garrea?",
+      "options": ["Mayor sujeción", "Arrastre del barco", "Linea floja", "Barómetro en aumento"],
+      "correctAnswer": "Arrastre del barco"
+    },
+    {
+      "question": "¿Qué previene el uso de boya de fondeo?",
+      "options": ["Cocción", "Rotura del fondeo", "Enredo de hélice", "Variación de marea"],
+      "correctAnswer": "Enredo de hélice"
+    },
+    {
+      "question": "¿Qué riesgo implica fondear demasiado cerca de otra embarcación?",
+      "options": ["Mayor velocidad", "Abordaje", "Pérdida de ancla", "Sentina profunda"],
+      "correctAnswer": "Abordaje"
+    },
+    {
+      "question": "¿Qué longitud mínima de fondeo debe darse?",
+      "options": ["1 vez la profundidad", "3 a 5 veces la profundidad", "10 veces la profundidad", "Depende del viento únicamente"],
+      "correctAnswer": "3 a 5 veces la profundidad"
+    },
+
+    {
+      "question": "¿Qué herramienta se usa para cortar cabos en emergencia?",
+      "options": ["Martillo", "Cuchillo afilado", "Destornillador", "Bolsa estanca"],
+      "correctAnswer": "Cuchillo afilado"
+    },
+    {
+      "question": "¿Qué debe hacerse al encender el motor?",
+      "options": ["Cerrar grifo", "Esperar humo blanco", "Verificar flujo de agua", "Aumentar aceleración"],
+      "correctAnswer": "Verificar flujo de agua"
+    },
+    {
+      "question": "¿Qué indica olor a quemado en el motor?",
+      "options": ["Normal", "Sobrecalentamiento", "Exceso de aceite", "Fallo de vela"],
+      "correctAnswer": "Sobrecalentamiento"
+    },
+    {
+      "question": "¿Qué riesgo existe al navegar con batería baja?",
+      "options": ["Velocidad alta", "Pérdida de instrumentos", "Riesgo de hundimiento", "Fallo del timón"],
+      "correctAnswer": "Pérdida de instrumentos"
+    },
+    {
+      "question": "¿Qué evitar con el motor en marcha?",
+      "options": ["Ir a proa", "Usar winche", "Nadar cerca de la popa", "Ajustar escotas"],
+      "correctAnswer": "Nadar cerca de la popa"
+    },
+
+    {
+      "question": "¿Qué debe hacerse ante una vía de agua?",
+      "options": ["Aumentar velocidad", "Activar bomba de achique", "Quitar velas", "Apagar luces"],
+      "correctAnswer": "Activar bomba de achique"
+    },
+    {
+      "question": "¿Qué señal visual indica socorro?",
+      "options": ["Luz verde", "Tres bengalas rojas", "Luz blanca fija", "Foco intermitente al azar"],
+      "correctAnswer": "Tres bengalas rojas"
+    },
+    {
+      "question": "¿Qué hacer al abandonar la embarcación?",
+      "options": ["Ir sin chaleco", "Llevar documentación y radio portátil", "Nadar lejos rápidamente", "Dejar velas izadas"],
+      "correctAnswer": "Llevar documentación y radio portátil"
+    },
+    {
+      "question": "¿Cuál es la prioridad en una emergencia?",
+      "options": ["Cargar baterías", "Proteger vidas humanas", "Cuidar velas", "Mantener curso"],
+      "correctAnswer": "Proteger vidas humanas"
+    },
+    {
+      "question": "¿Qué hacer ante choque inminente?",
+      "options": ["Aumentar velocidad", "Contactar por VHF", "Alertar y preparar tripulación", "Izar vela de proa"],
+      "correctAnswer": "Alertar y preparar tripulación"
+    },
+
+    {
+      "question": "¿Qué medida previene golpes a bordo?",
+      "options": ["Circular descalzo", "Sujetar siempre una mano", "Correr en cubierta", "Sentarse en la borda"],
+      "correctAnswer": "Sujetar siempre una mano"
+    },
+    {
+      "question": "¿Qué debe evitarse al mover cargas pesadas?",
+      "options": ["Usar guantes", "Levantar con piernas", "Girar el torso bruscamente", "Pedir ayuda"],
+      "correctAnswer": "Girar el torso bruscamente"
+    },
+    {
+      "question": "¿Qué protección reduce riesgo de cortes?",
+      "options": ["Guantes", "Botas", "Gorro", "Anteojos"],
+      "correctAnswer": "Guantes"
+    },
+    {
+      "question": "¿Qué hacer en caso de golpe en la cabeza?",
+      "options": ["Seguir navegando", "Observar síntomas y buscar ayuda", "Darle café", "Aplicar hielo solo si hay herida"],
+      "correctAnswer": "Observar síntomas y buscar ayuda"
+    },
+    {
+      "question": "¿Qué medida previene resbalones?",
+      "options": ["Cubierta mojada", "Calzado antideslizante", "Caminar rápido", "Usar medias"],
+      "correctAnswer": "Calzado antideslizante"
+    },
+
+    {
+      "question": "¿Qué hacer ante una quemadura con agua caliente?",
+      "options": ["Romper ampollas", "Aplicar hielo directo", "Enfriar con agua limpia", "Cubrir con manta térmica"],
+      "correctAnswer": "Enfriar con agua limpia"
+    },
+    {
+      "question": "¿Qué hacer si un tripulante sufre deshidratación?",
+      "options": ["Dar café", "Dar agua y sombra", "Sumergir en agua fría", "Llevar a proa"],
+      "correctAnswer": "Dar agua y sombra"
+    },
+    {
+      "question": "¿Qué síntoma indica insolación?",
+      "options": ["Frío", "Dolor de cabeza fuerte", "Falta de viento", "Dolor lumbar"],
+      "correctAnswer": "Dolor de cabeza fuerte"
+    },
+    {
+      "question": "¿Qué hacer si alguien se corta profundamente?",
+      "options": ["Aplicar presión y buscar ayuda", "Sumergir en agua salada", "Seguir navegando", "Pedirle que mueva la herida"],
+      "correctAnswer": "Aplicar presión y buscar ayuda"
+    },
+    {
+      "question": "¿Qué evitar ante luxación de hombro?",
+      "options": ["Inmovilizar", "Aplicar frío", "Intentar recolocar", "Buscar ayuda"],
+      "correctAnswer": "Intentar recolocar"
+    }
+  ]
+}
+
