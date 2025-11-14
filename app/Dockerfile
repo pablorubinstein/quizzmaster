@@ -1,9 +1,10 @@
 FROM node:25.1.0
 
 WORKDIR /quizzmaster
+COPY package* .
+RUN npm install
 COPY . .
-RUN npm install && \
-    npm run build
+RUN npm run build
 
-COPY env ./.env
+COPY env.production ./.env
 ENTRYPOINT ["npm", "run", "start"]
