@@ -127,7 +127,9 @@ export default function Home() {
                   style={{backgroundColor: getColorForPercentage(getPercentageForQuizId(history, quiz.id))}}
                 >
                   <CardHeader>
-                    <CardTitle className="text-lg">{quiz.title}</CardTitle>
+                    <CardTitle className="text-lg">{quiz.title}
+                      { getPercentageForQuizId(history, quiz.id) === 100 ? '👌'  : '' }
+                    </CardTitle>
                     {quiz.description && (
                       <CardDescription className="line-clamp-2">{quiz.description}</CardDescription>
                     )}
